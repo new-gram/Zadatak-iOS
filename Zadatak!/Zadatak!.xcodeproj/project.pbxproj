@@ -14,8 +14,8 @@
 		D6D945C72387F49000E773C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6D945C62387F49000E773C4 /* Assets.xcassets */; };
 		D6D945CA2387F49000E773C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D945C82387F49000E773C4 /* LaunchScreen.storyboard */; };
 		D6D945D22387F5F000E773C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D945D12387F5F000E773C4 /* GoogleService-Info.plist */; };
-		D6D945DC2387F6A100E773C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D945DB2387F6A100E773C4 /* Main.storyboard */; };
-		D6D945DE2387F6B100E773C4 /* yugothil.ttf 가상본 in Resources */ = {isa = PBXBuildFile; fileRef = D6D945DD2387F6B100E773C4 /* yugothil.ttf 가상본 */; };
+		D6D945E02387F77D00E773C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D945DF2387F77D00E773C4 /* Main.storyboard */; };
+		D6D945F12388CC8B00E773C4 /* yugothil.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6D945F02388CC8B00E773C4 /* yugothil.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		D6D945C92387F49000E773C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6D945CB2387F49000E773C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D945D12387F5F000E773C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D6D945DB2387F6A100E773C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../Zadatak/Main.storyboard; sourceTree = "<group>"; };
-		D6D945DD2387F6B100E773C4 /* yugothil.ttf 가상본 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "yugothil.ttf 가상본"; sourceTree = "<group>"; };
+		D6D945DF2387F77D00E773C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D6D945F02388CC8B00E773C4 /* yugothil.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yugothil.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,17 +84,70 @@
 		D6D945BC2387F48D00E773C4 /* Zadatak! */ = {
 			isa = PBXGroup;
 			children = (
-				D6D945DB2387F6A100E773C4 /* Main.storyboard */,
+				D6D945ED2388CC5A00E773C4 /* StaticData */,
+				D6D945EA2388CBA000E773C4 /* Model */,
+				D6D945E82388CB9200E773C4 /* Util */,
+				D6D945E92388CB9800E773C4 /* VC */,
+				D6D945E72388CB8300E773C4 /* UI */,
 				D6D945BD2387F48D00E773C4 /* AppDelegate.swift */,
 				D6D945BF2387F48D00E773C4 /* SceneDelegate.swift */,
-				D6D945C12387F48D00E773C4 /* ViewController.swift */,
-				D6D945C62387F49000E773C4 /* Assets.xcassets */,
 				D6D945D12387F5F000E773C4 /* GoogleService-Info.plist */,
-				D6D945C82387F49000E773C4 /* LaunchScreen.storyboard */,
-				D6D945DD2387F6B100E773C4 /* yugothil.ttf 가상본 */,
 				D6D945CB2387F49000E773C4 /* Info.plist */,
 			);
 			path = "Zadatak!";
+			sourceTree = "<group>";
+		};
+		D6D945E72388CB8300E773C4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D6D945C62387F49000E773C4 /* Assets.xcassets */,
+				D6D945EB2388CBF900E773C4 /* Base */,
+			);
+			name = UI;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D6D945E82388CB9200E773C4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D6D945E92388CB9800E773C4 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D6D945C12387F48D00E773C4 /* ViewController.swift */,
+			);
+			name = VC;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D6D945EA2388CBA000E773C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D6D945EB2388CBF900E773C4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D6D945C82387F49000E773C4 /* LaunchScreen.storyboard */,
+				D6D945DF2387F77D00E773C4 /* Main.storyboard */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		D6D945ED2388CC5A00E773C4 /* StaticData */ = {
+			isa = PBXGroup;
+			children = (
+				D6D945F02388CC8B00E773C4 /* yugothil.ttf */,
+			);
+			name = StaticData;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,10 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6D945CA2387F49000E773C4 /* LaunchScreen.storyboard in Resources */,
-				D6D945DE2387F6B100E773C4 /* yugothil.ttf 가상본 in Resources */,
 				D6D945D22387F5F000E773C4 /* GoogleService-Info.plist in Resources */,
+				D6D945F12388CC8B00E773C4 /* yugothil.ttf in Resources */,
+				D6D945E02387F77D00E773C4 /* Main.storyboard in Resources */,
 				D6D945C72387F49000E773C4 /* Assets.xcassets in Resources */,
-				D6D945DC2387F6A100E773C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
