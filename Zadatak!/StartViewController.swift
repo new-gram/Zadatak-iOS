@@ -11,7 +11,8 @@ import UIKit
 class StartViewController: UIViewController, UITextFieldDelegate {
 
     var isAutoLogin = false
-    
+    var uId = String()
+    var uPw = String()
     
     @IBOutlet weak var hiddenViewForXib: UIView!
     @IBOutlet weak var register: Register!
@@ -39,12 +40,19 @@ class StartViewController: UIViewController, UITextFieldDelegate {
                 isAutoLogin = false
             }
         if self.isAutoLogin{
-            UserDefaults.standard.set(logInEmailTextField.text, forKey: "id")
-            UserDefaults.standard.set(logInPWTextField.text, forKey: "pwd")
+            if logInEmailTextField.text != "" || logInPWTextField.text != "" {
+                UserDefaults.standard.set(logInEmailTextField.text, forKey: "id")
+                UserDefaults.standard.set(logInPWTextField.text, forKey: "pwd")
+                
+            }
         }
     }
     
     @IBAction func login(_ sender: UIButton) {
+        if let userId = UserDefaults.standard.string(forKey: "id") {
+            
+            
+        }
         if logInEmailTextField.text == "" || logInPWTextField.text == "" {
             let alert = UIAlertController(title: "로그인 실패", message: "아이디 혹은 비밀번호가 비었습니다.", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -56,6 +64,8 @@ class StartViewController: UIViewController, UITextFieldDelegate {
     @IBAction func showRegisterXib(_ sender: UIButton) {
         register?.isHidden = false
         hiddenViewForXib.isHidden = false
+        hiddenViewForXib.alpha = 0.65
+        register.alpha = 1
     }
 }
 

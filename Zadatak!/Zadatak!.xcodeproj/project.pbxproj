@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8D2D76C7EFCECC3DF7715242 /* Pods_Zadatak_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F8D4A30705ED2475CAD215 /* Pods_Zadatak_.framework */; };
-		D66BFC27238FE054009BB35A /* shadowBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66BFC26238FE054009BB35A /* shadowBox.swift */; };
+		D644619223AB85F00032DED8 /* 08SeoulNamsanL_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D644619123AB85F00032DED8 /* 08SeoulNamsanL_0.ttf */; };
 		D66BFC29238FE2E5009BB35A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66BFC28238FE2E5009BB35A /* MainViewController.swift */; };
-		D67B7489239A3478008907E5 /* sizeToFitBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B7488239A3478008907E5 /* sizeToFitBtn.swift */; };
-		D6B02BEA238E9597006BD333 /* Regeister.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B02BE8238E9597006BD333 /* Regeister.swift */; };
-		D6B02BEB238E9597006BD333 /* Regeister.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B02BE9238E9597006BD333 /* Regeister.xib */; };
+		D696BB9823BF85CD004ECD8A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696BB9723BF85CD004ECD8A /* Extension.swift */; };
+		D696BB9B23BF88AA004ECD8A /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696BB9923BF88AA004ECD8A /* TaskViewCell.swift */; };
+		D696BB9C23BF88AA004ECD8A /* TaskViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D696BB9A23BF88AA004ECD8A /* TaskViewCell.xib */; };
+		D696BB9D23C0C49F004ECD8A /* Register.xib in Resources */ = {isa = PBXBuildFile; fileRef = D696BB9F23C0C49F004ECD8A /* Register.xib */; };
+		D6B02BEA238E9597006BD333 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B02BE8238E9597006BD333 /* Register.swift */; };
 		D6D945BE2387F48D00E773C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D945BD2387F48D00E773C4 /* AppDelegate.swift */; };
 		D6D945C02387F48D00E773C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D945BF2387F48D00E773C4 /* SceneDelegate.swift */; };
 		D6D945C22387F48D00E773C4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D945C12387F48D00E773C4 /* StartViewController.swift */; };
@@ -29,11 +31,13 @@
 		30635C1101F53440A578909F /* Pods-Zadatak!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zadatak!.debug.xcconfig"; path = "Target Support Files/Pods-Zadatak!/Pods-Zadatak!.debug.xcconfig"; sourceTree = "<group>"; };
 		6878ED7DD7C243F8FBAC9AC0 /* Pods-Zadatak!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zadatak!.release.xcconfig"; path = "Target Support Files/Pods-Zadatak!/Pods-Zadatak!.release.xcconfig"; sourceTree = "<group>"; };
 		82F8D4A30705ED2475CAD215 /* Pods_Zadatak_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zadatak_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D66BFC26238FE054009BB35A /* shadowBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shadowBox.swift; sourceTree = "<group>"; };
+		D644619123AB85F00032DED8 /* 08SeoulNamsanL_0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 08SeoulNamsanL_0.ttf; sourceTree = "<group>"; };
 		D66BFC28238FE2E5009BB35A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		D67B7488239A3478008907E5 /* sizeToFitBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sizeToFitBtn.swift; sourceTree = "<group>"; };
-		D6B02BE8238E9597006BD333 /* Regeister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regeister.swift; sourceTree = "<group>"; };
-		D6B02BE9238E9597006BD333 /* Regeister.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Regeister.xib; sourceTree = "<group>"; };
+		D696BB9723BF85CD004ECD8A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		D696BB9923BF88AA004ECD8A /* TaskViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
+		D696BB9A23BF88AA004ECD8A /* TaskViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskViewCell.xib; sourceTree = "<group>"; };
+		D696BB9E23C0C49F004ECD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Register.xib; sourceTree = "<group>"; };
+		D6B02BE8238E9597006BD333 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		D6D945BA2387F48D00E773C4 /* Zadatak!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zadatak!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D945BD2387F48D00E773C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6D945BF2387F48D00E773C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,8 +138,7 @@
 		D6D945E82388CB9200E773C4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				D66BFC26238FE054009BB35A /* shadowBox.swift */,
-				D67B7488239A3478008907E5 /* sizeToFitBtn.swift */,
+				D696BB9723BF85CD004ECD8A /* Extension.swift */,
 			);
 			name = Util;
 			path = ..;
@@ -171,6 +174,7 @@
 		D6D945ED2388CC5A00E773C4 /* StaticData */ = {
 			isa = PBXGroup;
 			children = (
+				D644619123AB85F00032DED8 /* 08SeoulNamsanL_0.ttf */,
 				D6D945F02388CC8B00E773C4 /* yugothil.ttf */,
 			);
 			name = StaticData;
@@ -180,10 +184,12 @@
 		D6F252BA239013F2000E59E8 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				D6B02BE9238E9597006BD333 /* Regeister.xib */,
-				D6B02BE8238E9597006BD333 /* Regeister.swift */,
+				D696BB9F23C0C49F004ECD8A /* Register.xib */,
+				D6B02BE8238E9597006BD333 /* Register.swift */,
 				D6F252BD23901441000E59E8 /* chooseColor.xib */,
 				D6F252BB23901436000E59E8 /* chooseColor.swift */,
+				D696BB9923BF88AA004ECD8A /* TaskViewCell.swift */,
+				D696BB9A23BF88AA004ECD8A /* TaskViewCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -249,8 +255,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6D945CA2387F49000E773C4 /* LaunchScreen.storyboard in Resources */,
+				D644619223AB85F00032DED8 /* 08SeoulNamsanL_0.ttf in Resources */,
+				D696BB9C23BF88AA004ECD8A /* TaskViewCell.xib in Resources */,
 				D6D945D22387F5F000E773C4 /* GoogleService-Info.plist in Resources */,
-				D6B02BEB238E9597006BD333 /* Regeister.xib in Resources */,
+				D696BB9D23C0C49F004ECD8A /* Register.xib in Resources */,
 				D6F252BE23901441000E59E8 /* chooseColor.xib in Resources */,
 				D6D945F12388CC8B00E773C4 /* yugothil.ttf in Resources */,
 				D6D945E02387F77D00E773C4 /* Main.storyboard in Resources */,
@@ -307,10 +315,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6B02BEA238E9597006BD333 /* Regeister.swift in Sources */,
-				D66BFC27238FE054009BB35A /* shadowBox.swift in Sources */,
-				D67B7489239A3478008907E5 /* sizeToFitBtn.swift in Sources */,
+				D6B02BEA238E9597006BD333 /* Register.swift in Sources */,
+				D696BB9823BF85CD004ECD8A /* Extension.swift in Sources */,
 				D6D945C22387F48D00E773C4 /* StartViewController.swift in Sources */,
+				D696BB9B23BF88AA004ECD8A /* TaskViewCell.swift in Sources */,
 				D66BFC29238FE2E5009BB35A /* MainViewController.swift in Sources */,
 				D6D945BE2387F48D00E773C4 /* AppDelegate.swift in Sources */,
 				D6F252BC23901436000E59E8 /* chooseColor.swift in Sources */,
@@ -321,6 +329,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D696BB9F23C0C49F004ECD8A /* Register.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D696BB9E23C0C49F004ECD8A /* Base */,
+			);
+			name = Register.xib;
+			sourceTree = "<group>";
+		};
 		D6D945C82387F49000E773C4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
