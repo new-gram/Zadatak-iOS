@@ -22,6 +22,7 @@ class TaskViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        dot.viewToCircle()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

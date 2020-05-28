@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,7 +59,7 @@
                         <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-nl-cGM">
                             <rect key="frame" x="0.0" y="133" width="312" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                         </textField>
                     </subviews>
                     <constraints>
@@ -79,7 +79,7 @@
                 <constraint firstItem="YbL-5i-O0e" firstAttribute="leading" secondItem="UxU-Q9-FKl" secondAttribute="leading" id="GxG-VR-voC"/>
                 <constraint firstItem="YbL-5i-O0e" firstAttribute="top" secondItem="4Uw-Py-MnJ" secondAttribute="top" id="Iyt-Di-NTv"/>
                 <constraint firstItem="UxU-Q9-FKl" firstAttribute="trailing" secondItem="MMy-a1-05l" secondAttribute="trailing" constant="83" id="Nee-ME-UAo"/>
-                <constraint firstItem="UxU-Q9-FKl" firstAttribute="trailing" secondItem="gvK-pN-G60" secondAttribute="trailing" constant="50" id="WPU-K3-ugx"/>
+                <constraint firstItem="UxU-Q9-FKl" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gvK-pN-G60" secondAttribute="trailing" constant="50" id="WPU-K3-ugx"/>
                 <constraint firstItem="MMy-a1-05l" firstAttribute="leading" secondItem="UxU-Q9-FKl" secondAttribute="leading" constant="83" id="f4K-uo-aQI"/>
                 <constraint firstItem="PBu-f5-A6f" firstAttribute="width" secondItem="MMy-a1-05l" secondAttribute="width" multiplier="1.26829" id="h3D-hf-asx"/>
                 <constraint firstItem="6gA-nl-cGM" firstAttribute="height" secondItem="MMy-a1-05l" secondAttribute="height" multiplier="1.13333" id="pQ8-jd-kep"/>

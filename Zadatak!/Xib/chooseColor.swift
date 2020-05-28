@@ -19,21 +19,25 @@ class chooseColor: UIView {
     @IBOutlet weak var showPresentColorAndChooseYourColorBtn: UIButton!
     @IBOutlet weak var logOutBtn: UIButton!
     
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commitInit()
         }
           
-      required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
         commitInit()
       }
       
-      func commitInit() {
+    func commitInit() {
         Bundle.main.loadNibNamed("chooseColor", owner: self, options: nil)
         addSubview(selectColorView)
         selectColorView.makeShadow()
       }
+    
+    
     
     
     

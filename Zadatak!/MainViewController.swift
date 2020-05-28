@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var settingBtn: UIButton!
     @IBOutlet weak var listTable: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,21 +22,33 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    @IBAction func logOut(_ sender: Any) {
+            UserDefaults.standard.removeObject(forKey: "id")
+            UserDefaults.standard.removeObject(forKey: "pw")
+            guard let vc = storyboard?.instantiateViewController(withIdentifier: "RegeisterVC") else { return }
+        vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.addSubview(progressView)
         listTable.dataSource = self
         listTable.delegate = self
-        print(UserDefaults.standard.string(forKey: "id"))
         UserDefaults.standard.removeObject(forKey: "id")
-        if UserDefaults.standard.string(forKey: "id") == nil {
-            guard let vc = storyboard?.instantiateViewController(withIdentifier: "RegeisterVC") else { return }
-            present(vc, animated: true, completion: nil)
-            print(UIApplication.shared.keyWindow?.rootViewController)
-        }
         
-
+}
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.string(forKey: "id") == nil {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "RegeisterVC") else { return }
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        } else {
+            
+        }
     }
+    
+    
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
           self.view.endEditing(true)
@@ -54,6 +67,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return pv
     }()*/
 
+    // 설정에서 로그아웃만들면 스타트뷰로 이동
     
 
 }
