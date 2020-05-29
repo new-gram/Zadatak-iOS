@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7sf-rV-ddS">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="yugothil.ttf">
+            <string>YuGothic-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="Zadatak_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zadatak!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVS-WP-X3h">
+                                <rect key="frame" x="0.0" y="83" width="320" height="106"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="Ab0-v7-Q5Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XN-nH-VkL">
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+                                <rect key="frame" x="20" y="492.66666666666674" width="374" height="329.33333333333326"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCL-cU-a19">
+                                        <rect key="frame" x="37" y="18" width="300" height="179.33333333333334"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your e-mail" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9U-xj-su0">
+                                                <rect key="frame" x="8" y="9.9999999999999432" width="284" height="34"/>
+=======
+                                <rect key="frame" x="20" y="193.5" width="280" height="334.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCL-cU-a19">
+                                        <rect key="frame" x="37" y="10" width="206" height="180.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your e-mail" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9U-xj-su0">
+                                                <rect key="frame" x="8" y="10" width="190" height="34"/>
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGm-au-zNx">
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+                                                <rect key="frame" x="8" y="65.999999999999943" width="284" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="register:" destination="U67-c3-7XW" eventType="touchDown" id="z5h-9P-3WE"/>
+                                                </connections>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xR1-8c-6Vk">
+                                                <rect key="frame" x="83.666666666666657" y="115.99999999999993" width="133" height="37.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sa8-2f-bGX">
+                                                        <rect key="frame" x="37" y="6.3333333333333712" width="88" height="24"/>
+                                                        <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="10"/>
+                                                        <state key="normal" title="Keep Me Logged In">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="autoLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aex-zm-R04"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leC-CM-2ry">
+                                                        <rect key="frame" x="7" y="8" width="22" height="22"/>
+=======
+                                                <rect key="frame" x="8" y="66" width="190" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xR1-8c-6Vk">
+                                                <rect key="frame" x="43.5" y="126" width="119" height="28.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Me Logged In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-M6-GRh">
+                                                        <rect key="frame" x="29" y="9" width="85" height="11"/>
+                                                        <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="10"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button hidden="YES" opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SF7-NZ-cGG">
+                                                        <rect key="frame" x="5" y="9" width="13" height="10.5"/>
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="13" id="QAg-bP-WPs"/>
+                                                            <constraint firstAttribute="height" constant="13" id="fCB-7N-QeP"/>
+                                                        </constraints>
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+                                                        <state key="normal" image="square" catalog="system"/>
+                                                        <state key="selected" image="checkmark.square.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="autoLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aB0-Jo-tAR"/>
+                                                        </connections>
+=======
+                                                        <color key="tintColor" red="0.99607843139999996" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="Button" image="checkmark.square.fill" catalog="system" backgroundImage="checkmark.square.fill">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <state key="selected" image="checkmark.square" catalog="system" backgroundImage="checkmark.square"/>
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+                                                    <constraint firstAttribute="bottom" secondItem="leC-CM-2ry" secondAttribute="bottom" constant="7.3300000000000001" id="3VP-9G-moX"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sa8-2f-bGX" secondAttribute="bottom" constant="7" id="J5D-jL-u1u"/>
+                                                    <constraint firstItem="leC-CM-2ry" firstAttribute="top" secondItem="xR1-8c-6Vk" secondAttribute="top" constant="8" id="M57-HT-3Za"/>
+                                                    <constraint firstItem="sa8-2f-bGX" firstAttribute="top" secondItem="xR1-8c-6Vk" secondAttribute="top" constant="6.3300000000000001" id="i11-ra-qj5"/>
+                                                    <constraint firstItem="leC-CM-2ry" firstAttribute="leading" secondItem="xR1-8c-6Vk" secondAttribute="leading" constant="7" id="sfT-b2-KlR"/>
+                                                    <constraint firstItem="sa8-2f-bGX" firstAttribute="leading" secondItem="leC-CM-2ry" secondAttribute="trailing" constant="8" id="u9n-wI-91l"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sa8-2f-bGX" secondAttribute="trailing" constant="8" id="yEs-gd-oOw"/>
+=======
+                                                    <constraint firstItem="SF7-NZ-cGG" firstAttribute="leading" secondItem="xR1-8c-6Vk" secondAttribute="leading" constant="5" id="BgK-P6-kvn"/>
+                                                    <constraint firstItem="S0y-M6-GRh" firstAttribute="leading" secondItem="SF7-NZ-cGG" secondAttribute="trailing" constant="11" id="LdP-Yg-2VD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="S0y-M6-GRh" secondAttribute="trailing" constant="5" id="PHP-fE-8J2"/>
+                                                    <constraint firstItem="SF7-NZ-cGG" firstAttribute="centerY" secondItem="S0y-M6-GRh" secondAttribute="centerY" id="eTS-f8-CkK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="S0y-M6-GRh" secondAttribute="bottom" constant="8.3300000000000001" id="i6K-nB-EeV"/>
+                                                    <constraint firstItem="S0y-M6-GRh" firstAttribute="top" secondItem="xR1-8c-6Vk" secondAttribute="top" constant="9" id="qRh-xa-Dxg"/>
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="xR1-8c-6Vk" secondAttribute="bottom" constant="26" id="6um-eD-BEJ"/>
+                                            <constraint firstItem="xR1-8c-6Vk" firstAttribute="centerX" secondItem="sCL-cU-a19" secondAttribute="centerX" id="8VS-Co-07F"/>
+                                            <constraint firstItem="nGm-au-zNx" firstAttribute="leading" secondItem="sCL-cU-a19" secondAttribute="leading" constant="8" id="8dy-PG-IHe"/>
+                                            <constraint firstAttribute="trailing" secondItem="l9U-xj-su0" secondAttribute="trailing" constant="8" id="Prv-Vo-VU5"/>
+                                            <constraint firstItem="l9U-xj-su0" firstAttribute="top" secondItem="sCL-cU-a19" secondAttribute="top" constant="10" id="UWy-z9-8qO"/>
+                                            <constraint firstItem="l9U-xj-su0" firstAttribute="leading" secondItem="sCL-cU-a19" secondAttribute="leading" constant="8" id="fmn-oh-rQh"/>
+                                            <constraint firstItem="nGm-au-zNx" firstAttribute="top" secondItem="l9U-xj-su0" secondAttribute="bottom" constant="22" id="ls8-wv-aKo"/>
+                                            <constraint firstAttribute="trailing" secondItem="nGm-au-zNx" secondAttribute="trailing" constant="8" id="vs5-xj-wHG"/>
+                                            <constraint firstItem="xR1-8c-6Vk" firstAttribute="top" secondItem="nGm-au-zNx" secondAttribute="bottom" constant="26" id="yAV-8N-Mgq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gxn-xM-lUl">
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+                                        <rect key="frame" x="52" y="202.33333333333331" width="270" height="107"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pr-oZ-esp">
+                                                <rect key="frame" x="11.666666666666686" y="60" width="247" height="32"/>
+=======
+                                        <rect key="frame" x="11" y="209.5" width="258" height="105"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pr-oZ-esp" customClass="SizeToFit" customModule="Zadatak_" customModuleProvider="target">
+                                                <rect key="frame" x="11" y="59" width="236" height="31"/>
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+                                                <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="17"/>
+                                                <color key="tintColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Is this your first time of zadatak?"/>
+                                            </button>
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tR-Sf-elU">
+                                                <rect key="frame" x="8" y="15" width="254" height="38"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+=======
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tR-Sf-elU" customClass="SizeToFit" customModule="Zadatak_" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="15" width="242" height="37"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+                                                <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="22"/>
+                                                <color key="tintColor" red="0.99607843139999996" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Let's manage What to do!"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="8tR-Sf-elU" firstAttribute="top" secondItem="Gxn-xM-lUl" secondAttribute="top" constant="15" id="1Fm-mV-in2"/>
+                                            <constraint firstItem="4Pr-oZ-esp" firstAttribute="centerX" secondItem="Gxn-xM-lUl" secondAttribute="centerX" id="JtV-Ez-dg7"/>
+                                            <constraint firstItem="8tR-Sf-elU" firstAttribute="leading" secondItem="Gxn-xM-lUl" secondAttribute="leading" constant="8" id="X4B-7g-RD0"/>
+                                            <constraint firstAttribute="bottom" secondItem="4Pr-oZ-esp" secondAttribute="bottom" constant="15" id="jSC-If-Hmg"/>
+                                            <constraint firstItem="4Pr-oZ-esp" firstAttribute="top" secondItem="8tR-Sf-elU" secondAttribute="bottom" constant="7" id="lic-BG-hFE"/>
+                                            <constraint firstItem="8tR-Sf-elU" firstAttribute="centerX" secondItem="Gxn-xM-lUl" secondAttribute="centerX" id="w2y-kc-6xi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Gxn-xM-lUl" secondAttribute="bottom" constant="20" id="C2O-lk-DFR"/>
+                                    <constraint firstItem="Gxn-xM-lUl" firstAttribute="top" secondItem="sCL-cU-a19" secondAttribute="bottom" constant="19" id="JPE-nN-Dsg"/>
+                                    <constraint firstItem="sCL-cU-a19" firstAttribute="top" secondItem="7XN-nH-VkL" secondAttribute="top" constant="10" id="ZJN-DU-CkS"/>
+                                    <constraint firstAttribute="trailing" secondItem="sCL-cU-a19" secondAttribute="trailing" constant="37" id="crY-iM-pcW"/>
+                                    <constraint firstItem="Gxn-xM-lUl" firstAttribute="centerX" secondItem="7XN-nH-VkL" secondAttribute="centerX" id="iZg-Bd-8jd"/>
+                                    <constraint firstItem="sCL-cU-a19" firstAttribute="leading" secondItem="7XN-nH-VkL" secondAttribute="leading" constant="37" id="q19-sI-gDy"/>
+                                </constraints>
+                            </view>
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blG-hF-gyc">
+                                <rect key="frame" x="324" y="-719" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U67-c3-7XW" customClass="Register" customModule="Zadatak_" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="256" width="359" height="384"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.792156862745098" green="0.79114192724227905" blue="0.79114192724227905" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="U67-c3-7XW" firstAttribute="centerX" secondItem="blG-hF-gyc" secondAttribute="centerX" id="E4g-xh-yF5"/>
+                                </constraints>
+                            </view>
+=======
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" red="0.99607843139999996" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="blG-hF-gyc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9Zf-oR-5Eq"/>
+                            <constraint firstItem="blG-hF-gyc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BnP-Wm-Gt9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7XN-nH-VkL" secondAttribute="trailing" constant="20" id="ERz-OZ-oM9"/>
+                            <constraint firstAttribute="bottom" secondItem="blG-hF-gyc" secondAttribute="bottom" id="LjH-ue-7Dz"/>
+                            <constraint firstItem="TVS-WP-X3h" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NhS-iC-uwG"/>
+                            <constraint firstItem="TVS-WP-X3h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="Qud-kM-82L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7XN-nH-VkL" secondAttribute="bottom" constant="40" id="ZN6-qL-Mts"/>
+                            <constraint firstItem="TVS-WP-X3h" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="cH1-oR-dLN"/>
+                            <constraint firstItem="TVS-WP-X3h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fEG-yC-0ne"/>
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+                            <constraint firstItem="blG-hF-gyc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kg3-E8-Dks"/>
+=======
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+                            <constraint firstItem="7XN-nH-VkL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sak-oZ-hvZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+                    <connections>
+                        <outlet property="goToMainBtn" destination="8tR-Sf-elU" id="Csg-kd-c0h"/>
+                        <outlet property="hiddenViewForXib" destination="blG-hF-gyc" id="8sr-YF-Dhb"/>
+                        <outlet property="keepLogInBtn" destination="leC-CM-2ry" id="Ony-ei-WiH"/>
+                        <outlet property="keepLogInTextBtn" destination="sa8-2f-bGX" id="MOA-Zc-ac9"/>
+                        <outlet property="logInEmailTextField" destination="l9U-xj-su0" id="1kt-xU-GDG"/>
+                        <outlet property="logInPWTextField" destination="nGm-au-zNx" id="n1V-7d-ZqG"/>
+                        <outlet property="register" destination="U67-c3-7XW" id="ICO-z1-iM7"/>
+                        <outlet property="showRegeisterViewBtn" destination="4Pr-oZ-esp" id="2JL-iS-vQg"/>
+                    </connections>
+=======
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231.8840579710145" y="131.91964285714286"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="N6e-Vr-o6U">
+            <objects>
+                <viewController id="7sf-rV-ddS" customClass="MainViewController" customModule="Zadatak_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A5b-Ag-xpS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPv-go-Sbx">
+                                <rect key="frame" x="19.5" y="54" width="281" height="77"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWJ-hT-PgZ">
+                                        <rect key="frame" x="20" y="12" width="241" height="37"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasdasdas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGG-es-gkx">
+                                                <rect key="frame" x="86" y="3" width="135" height="27"/>
+                                                <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, " textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="zJQ-FU-yP7">
+                                                <rect key="frame" x="20" y="3" width="65" height="27"/>
+                                                <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ZGG-es-gkx" secondAttribute="trailing" constant="20" id="53D-ZI-n8X"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZGG-es-gkx" secondAttribute="bottom" constant="3" id="91J-Lb-ktI"/>
+                                            <constraint firstItem="zJQ-FU-yP7" firstAttribute="top" secondItem="EWJ-hT-PgZ" secondAttribute="top" constant="3" id="ICU-oC-vTV"/>
+                                            <constraint firstItem="ZGG-es-gkx" firstAttribute="top" secondItem="EWJ-hT-PgZ" secondAttribute="top" constant="3" id="Uof-lk-67X"/>
+                                            <constraint firstItem="ZGG-es-gkx" firstAttribute="leading" secondItem="zJQ-FU-yP7" secondAttribute="trailing" constant="1" id="YHa-qn-172"/>
+                                            <constraint firstItem="zJQ-FU-yP7" firstAttribute="leading" secondItem="EWJ-hT-PgZ" secondAttribute="leading" constant="20" id="gqs-3D-XnV"/>
+                                            <constraint firstItem="ZGG-es-gkx" firstAttribute="leading" secondItem="zJQ-FU-yP7" secondAttribute="trailing" constant="1" id="mUH-Yw-FJg"/>
+                                            <constraint firstItem="zJQ-FU-yP7" firstAttribute="centerY" secondItem="ZGG-es-gkx" secondAttribute="centerY" id="pts-kd-snc"/>
+                                            <constraint firstAttribute="bottom" secondItem="zJQ-FU-yP7" secondAttribute="bottom" constant="3" id="wcI-90-CTT"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your task today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYW-jG-rez">
+                                        <rect key="frame" x="39" y="57" width="202" height="14"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="aYW-jG-rez" firstAttribute="top" secondItem="EWJ-hT-PgZ" secondAttribute="bottom" constant="8" id="1IC-bf-vzx"/>
+                                    <constraint firstAttribute="trailing" secondItem="aYW-jG-rez" secondAttribute="trailing" constant="40" id="Jlo-9b-Qxs"/>
+                                    <constraint firstAttribute="bottom" secondItem="aYW-jG-rez" secondAttribute="bottom" constant="6" id="KX5-UM-Jb1"/>
+                                    <constraint firstAttribute="trailing" secondItem="EWJ-hT-PgZ" secondAttribute="trailing" constant="20" id="ZUQ-1g-rZo"/>
+                                    <constraint firstItem="aYW-jG-rez" firstAttribute="leading" secondItem="pPv-go-Sbx" secondAttribute="leading" constant="39" id="bHp-BK-sqv"/>
+                                    <constraint firstItem="EWJ-hT-PgZ" firstAttribute="leading" secondItem="pPv-go-Sbx" secondAttribute="leading" constant="20" id="oPN-7N-sB4"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QYf-PN-GJ7">
+                                <rect key="frame" x="40" y="168" width="241" height="631"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jp4-Jy-Pkh">
+                                <rect key="frame" x="342" y="76" width="33" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="17" id="07F-93-dPL"/>
+                                    <constraint firstAttribute="height" constant="17" id="GyN-oS-esj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <color key="tintColor" red="0.99607843139999996" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+                                <state key="normal" title="Button" image="settingBtn"/>
+                                <connections>
+                                    <action selector="logOut:" destination="7sf-rV-ddS" eventType="touchUpInside" id="wlM-8O-9R7"/>
+                                </connections>
+=======
+                                <state key="normal" title="Button" image="gear" catalog="system"/>
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pPv-go-Sbx" firstAttribute="centerX" secondItem="0uI-M1-Vqk" secondAttribute="centerX" id="ACq-qw-QNj"/>
+                            <constraint firstItem="0uI-M1-Vqk" firstAttribute="trailing" secondItem="QYf-PN-GJ7" secondAttribute="trailing" constant="39" id="EXE-BA-8Kh"/>
+                            <constraint firstItem="QYf-PN-GJ7" firstAttribute="top" secondItem="pPv-go-Sbx" secondAttribute="bottom" constant="37" id="Gvn-6D-VW8"/>
+                            <constraint firstItem="QYf-PN-GJ7" firstAttribute="leading" secondItem="0uI-M1-Vqk" secondAttribute="leading" constant="40" id="eJV-Gr-26M"/>
+                            <constraint firstItem="0uI-M1-Vqk" firstAttribute="bottom" secondItem="QYf-PN-GJ7" secondAttribute="bottom" constant="63" id="hb6-Zy-eIA"/>
+                            <constraint firstItem="pPv-go-Sbx" firstAttribute="top" secondItem="0uI-M1-Vqk" secondAttribute="top" constant="54" id="tjB-9K-1n1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0uI-M1-Vqk"/>
+                    </view>
+                    <connections>
+                        <outlet property="listTable" destination="QYf-PN-GJ7" id="tYQ-JX-Viu"/>
+                        <outlet property="settingBtn" destination="jp4-Jy-Pkh" id="RU8-7Y-PIK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCy-Z4-dBz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+            <point key="canvasLocation" x="1346" y="131"/>
+=======
+            <point key="canvasLocation" x="998.55072463768124" y="137.27678571428569"/>
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.96078431369999995" green="0.61176470589999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+<<<<<<< HEAD:Zadatak!/Zadatak!/UI/Base.lproj/Base/Main.storyboard
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
+        <image name="settingBtn" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+=======
+        <image name="checkmark.square" catalog="system" width="64" height="56"/>
+        <image name="checkmark.square.fill" catalog="system" width="64" height="56"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+>>>>>>> parent of cb75cea... UPDATE:Zadatak!/Main.storyboard
+    </resources>
+</document>

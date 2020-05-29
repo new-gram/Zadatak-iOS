@@ -9,7 +9,6 @@
 import UIKit
 
 class StartViewController: UIViewController, UITextFieldDelegate {
-
     var isAutoLogin = false
     
     @IBOutlet weak var hiddenViewForXib: UIView!
