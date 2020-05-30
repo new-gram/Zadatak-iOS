@@ -24,6 +24,7 @@
 		D63E27622482305F00CEC3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E275A2482305F00CEC3EE /* LaunchScreen.storyboard */; };
 		D63E27672482314A00CEC3EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D63E27662482314A00CEC3EE /* GoogleService-Info.plist */; };
 		D63E276D248233D000CEC3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E276C248233D000CEC3EE /* Main.storyboard */; };
+		D63E276F248278EA00CEC3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63E276E248278EA00CEC3EE /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		D63E275A2482305F00CEC3EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D63E27662482314A00CEC3EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D63E276C248233D000CEC3EE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D63E276E248278EA00CEC3EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6ADC798876042FF5B0348D3 /* Pods-Zadatak!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zadatak!.debug.xcconfig"; path = "Target Support Files/Pods-Zadatak!/Pods-Zadatak!.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 		D63E27512482305F00CEC3EE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D63E276E248278EA00CEC3EE /* Assets.xcassets */,
 				D63E27522482305F00CEC3EE /* Xib */,
 				D63E27592482305F00CEC3EE /* Base */,
 			);
@@ -245,6 +248,7 @@
 				D63E27622482305F00CEC3EE /* LaunchScreen.storyboard in Resources */,
 				D63E276D248233D000CEC3EE /* Main.storyboard in Resources */,
 				D63E275E2482305F00CEC3EE /* RegisterView.xib in Resources */,
+				D63E276F248278EA00CEC3EE /* Assets.xcassets in Resources */,
 				D60738152480F87000B571AA /* yugothil.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +434,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6ADC798876042FF5B0348D3 /* Pods-Zadatak!.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D49753ZB3N;
 				INFOPLIST_FILE = "Zadatak!/Info.plist";
@@ -449,7 +452,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0E7FE44B989F78328644D7A /* Pods-Zadatak!.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D49753ZB3N;
 				INFOPLIST_FILE = "Zadatak!/Info.plist";
