@@ -8,7 +8,7 @@
 
 import UIKit
 
-class chooseColor: UIView {
+class chooseColorView: UIView {
 
     @IBOutlet weak var selectColorView: UIView!
     @IBOutlet weak var colorInfoLabel: UILabel!

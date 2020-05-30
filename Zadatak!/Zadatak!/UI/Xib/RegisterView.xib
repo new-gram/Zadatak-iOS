@@ -12,7 +12,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Register" customModule="Zadatak_" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterView" customModule="Zadatak_" customModuleProvider="target">
             <connections>
                 <outlet property="registerBtn" destination="MMy-a1-05l" id="kKi-wK-dh6"/>
                 <outlet property="registerEmailTextField" destination="PBu-f5-A6f" id="W9H-pr-7zI"/>

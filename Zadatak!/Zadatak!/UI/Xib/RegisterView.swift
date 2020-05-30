@@ -3,7 +3,7 @@
 import UIKit
 import Firebase
 
-class Register: UIView {
+class RegisterView: UIView {
     
     let color = UIColor()
     

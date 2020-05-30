@@ -12,7 +12,7 @@ class StartViewController: UIViewController, UITextFieldDelegate {
     var isAutoLogin = false
     
     @IBOutlet weak var hiddenViewForXib: UIView!
-    @IBOutlet weak var register: Register!
+    @IBOutlet weak var register: RegisterView!
     @IBOutlet weak var logInEmailTextField: UITextField!
     @IBOutlet weak var logInPWTextField: UITextField!
     @IBOutlet weak var keepLogInTextBtn: UIButton!
@@ -34,13 +34,13 @@ class StartViewController: UIViewController, UITextFieldDelegate {
           self.view.endEditing(true)
     }
     
-    @IBAction func autoLogin(_ sender: UIButton) {
-            if sender.isSelected == true {
+    @IBAction func autoLogin() {
+            if keepLogInBtn.isSelected == true {
                 isAutoLogin = true
-                keepLogInBtn.setImage(UIImage(contentsOfFile: "checkmark.square.fill"), for: .selected)
+                keepLogInBtn.setBackgroundImage(UIImage(contentsOfFile: "checkmark.square.fill"), for: .selected)
             } else {
                 isAutoLogin = false
-                keepLogInBtn.setImage(UIImage(contentsOfFile: "square"), for: .normal)
+                keepLogInBtn.setBackgroundImage(UIImage(contentsOfFile: "square"), for: .selected)
             }
         if self.isAutoLogin{
             if logInEmailTextField.text != "" || logInPWTextField.text != "" {
@@ -48,7 +48,7 @@ class StartViewController: UIViewController, UITextFieldDelegate {
                 UserDefaults.standard.set(logInPWTextField.text, forKey: "pwd")
             }
         }
-        sender.isSelected = !sender.isSelected
+        keepLogInBtn.isSelected = !keepLogInBtn.isSelected
     }
     
     @IBAction func login(_ sender: UIButton) {
