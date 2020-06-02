@@ -15,12 +15,12 @@
 		D60738162480F87000B571AA /* 08SeoulNamsanL_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D60737FE2480F87000B571AA /* 08SeoulNamsanL_0.ttf */; };
 		D60738172480F87000B571AA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60738002480F87000B571AA /* MainViewController.swift */; };
 		D60738182480F87000B571AA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60738012480F87000B571AA /* StartViewController.swift */; };
-		D63E275C2482305F00CEC3EE /* chooseColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E27532482305F00CEC3EE /* chooseColorView.swift */; };
+		D63E275C2482305F00CEC3EE /* ChooseColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E27532482305F00CEC3EE /* ChooseColorView.swift */; };
 		D63E275D2482305F00CEC3EE /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E27542482305F00CEC3EE /* TaskViewCell.swift */; };
 		D63E275E2482305F00CEC3EE /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63E27552482305F00CEC3EE /* RegisterView.xib */; };
 		D63E275F2482305F00CEC3EE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E27562482305F00CEC3EE /* RegisterView.swift */; };
 		D63E27602482305F00CEC3EE /* TaskViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63E27572482305F00CEC3EE /* TaskViewCell.xib */; };
-		D63E27612482305F00CEC3EE /* chooseColorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63E27582482305F00CEC3EE /* chooseColorView.xib */; };
+		D63E27612482305F00CEC3EE /* ChooseColorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63E27582482305F00CEC3EE /* ChooseColorView.xib */; };
 		D63E27622482305F00CEC3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E275A2482305F00CEC3EE /* LaunchScreen.storyboard */; };
 		D63E27672482314A00CEC3EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D63E27662482314A00CEC3EE /* GoogleService-Info.plist */; };
 		D63E276D248233D000CEC3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E276C248233D000CEC3EE /* Main.storyboard */; };
@@ -39,12 +39,12 @@
 		D60737FE2480F87000B571AA /* 08SeoulNamsanL_0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 08SeoulNamsanL_0.ttf; sourceTree = "<group>"; };
 		D60738002480F87000B571AA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D60738012480F87000B571AA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		D63E27532482305F00CEC3EE /* chooseColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chooseColorView.swift; sourceTree = "<group>"; };
+		D63E27532482305F00CEC3EE /* ChooseColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseColorView.swift; sourceTree = "<group>"; };
 		D63E27542482305F00CEC3EE /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		D63E27552482305F00CEC3EE /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
 		D63E27562482305F00CEC3EE /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D63E27572482305F00CEC3EE /* TaskViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskViewCell.xib; sourceTree = "<group>"; };
-		D63E27582482305F00CEC3EE /* chooseColorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = chooseColorView.xib; sourceTree = "<group>"; };
+		D63E27582482305F00CEC3EE /* ChooseColorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseColorView.xib; sourceTree = "<group>"; };
 		D63E275A2482305F00CEC3EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D63E27662482314A00CEC3EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D63E276C248233D000CEC3EE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -154,12 +154,12 @@
 		D63E27522482305F00CEC3EE /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				D63E27532482305F00CEC3EE /* chooseColorView.swift */,
+				D63E27532482305F00CEC3EE /* ChooseColorView.swift */,
+				D63E27582482305F00CEC3EE /* ChooseColorView.xib */,
+				D63E27572482305F00CEC3EE /* TaskViewCell.xib */,
 				D63E27542482305F00CEC3EE /* TaskViewCell.swift */,
 				D63E27552482305F00CEC3EE /* RegisterView.xib */,
 				D63E27562482305F00CEC3EE /* RegisterView.swift */,
-				D63E27572482305F00CEC3EE /* TaskViewCell.xib */,
-				D63E27582482305F00CEC3EE /* chooseColorView.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D63E27612482305F00CEC3EE /* chooseColorView.xib in Resources */,
+				D63E27612482305F00CEC3EE /* ChooseColorView.xib in Resources */,
 				D63E27602482305F00CEC3EE /* TaskViewCell.xib in Resources */,
 				D63E27672482314A00CEC3EE /* GoogleService-Info.plist in Resources */,
 				D60738162480F87000B571AA /* 08SeoulNamsanL_0.ttf in Resources */,
@@ -302,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D63E275C2482305F00CEC3EE /* chooseColorView.swift in Sources */,
+				D63E275C2482305F00CEC3EE /* ChooseColorView.swift in Sources */,
 				D63E275D2482305F00CEC3EE /* TaskViewCell.swift in Sources */,
 				D60738172480F87000B571AA /* MainViewController.swift in Sources */,
 				D60738182480F87000B571AA /* StartViewController.swift in Sources */,
