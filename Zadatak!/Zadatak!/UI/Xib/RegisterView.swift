@@ -1,5 +1,3 @@
-
-
 import UIKit
 import Firebase
 
@@ -7,6 +5,7 @@ class RegisterView: UIView {
     
     let color = UIColor()
     
+    @IBOutlet weak var registerView: RegisterView!
     @IBOutlet weak var registerTitleLbl: UILabel!
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var registerNameTextField: UITextField!
@@ -15,18 +14,23 @@ class RegisterView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commitInit()
+        
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        commitInit()
     }
     
     func commitInit() {
-        guard let xibName = NSStringFromClass(self.classForCoder).components(separatedBy: ".").last else { return }
-        let view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as! UIView
-        view.frame = self.bounds
-        self.addSubview(view)
+        Bundle.main.loadNibNamed("RegisterView", owner: self, options: nil)
+        self.addSubview(registerView)
+        registerView.translatesAutoresizingMaskIntoConstraints = false
+        registerView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        registerView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        registerView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        registerView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        registerView.makeShadow()
     }
     
     @IBAction func register(_ sender: UIButton) {

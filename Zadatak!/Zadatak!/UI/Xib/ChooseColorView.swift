@@ -1,17 +1,10 @@
-//
-//  chooseColor.swift
-//  Zadatak!
-//
-//  Created by 이현욱 on 2019/11/28.
-//  Copyright © 2019 이현욱. All rights reserved.
-//
-
 import UIKit
 
 class ChooseColorView: UIView { 
     
-    var delegate: sendColorDelegate?
+    var delegate: sendColorDelegate!
     
+    @IBOutlet var contentView: UIView!
     @IBOutlet weak var colorInfoLabel: UILabel!
     @IBOutlet weak var optionLabel: UILabel!
     @IBOutlet weak var redColorBtn: UIButton!
@@ -22,19 +15,22 @@ class ChooseColorView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commitInit()
+        
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        commitInit()
     }
+    
+    
     
     func commitInit() {
         guard let xibName = NSStringFromClass(self.classForCoder).components(separatedBy: ".").last else { return }
         let view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
-        self.addSubview(view)
         view.makeShadow()
+        self.addSubview(view)
     }
     
     @IBAction func logOut() {

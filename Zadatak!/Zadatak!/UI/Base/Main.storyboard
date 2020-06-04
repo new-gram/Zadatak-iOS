@@ -143,8 +143,8 @@
                             <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blG-hF-gyc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U67-c3-7XW" customClass="RegisterView" customModule="Zadatak_" customModuleProvider="target">
-                                        <rect key="frame" x="35" y="180" width="250" height="208"/>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="U67-c3-7XW" customClass="RegisterView" customModule="Zadatak_" customModuleProvider="target">
+                                        <rect key="frame" x="36" y="180.5" width="248" height="207"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="U67-c3-7XW" secondAttribute="height" multiplier="1.2:1" id="CxY-xU-Wbt"/>
@@ -153,7 +153,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.83466217180365287" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="U67-c3-7XW" firstAttribute="leading" secondItem="blG-hF-gyc" secondAttribute="leading" constant="35" id="d5S-ON-ydB"/>
+                                    <constraint firstAttribute="trailing" secondItem="U67-c3-7XW" secondAttribute="trailing" constant="36" id="njt-Ya-wzp"/>
+                                    <constraint firstItem="U67-c3-7XW" firstAttribute="leading" secondItem="blG-hF-gyc" secondAttribute="leading" constant="36" id="xp9-c4-qs9"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -281,7 +282,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" restorationIdentifier="chooseColorXib" id="NaL-Ox-tcA">
-                                        <rect key="frame" x="19" y="130" width="281" height="266"/>
+                                        <rect key="frame" x="24" y="178" width="273" height="212"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>

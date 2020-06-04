@@ -1,10 +1,8 @@
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, sendColorDelegate, bringNickName {
-    func bringNickName(data: String) {
-        nickNameLbl.text = data
-    }
-    
+class MainViewController: UIViewController, sendColorDelegate, bringNickName {
+
+    var receivedBool = false
     
     @IBOutlet weak var nickNameLbl: UILabel!
     @IBOutlet weak var chooseColorView: ChooseColorView!
@@ -12,13 +10,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var settingBtn: UIButton!
     @IBOutlet weak var listTable: UITableView!
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0;
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = listTable.dequeueReusableCell(withIdentifier: "TaskViewCell", for: indexPath) as! TaskViewCell
-        return cell
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
     }
     
     override func viewDidLoad() {
@@ -26,17 +19,20 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         //self.view.addSubview(progressView)
         listTable.dataSource = self
         listTable.delegate = self
-        // hiddenView.isHidden = true
-        //chooseColorView.isHidden = true
+        hiddenView.isHidden = true
+        chooseColorView.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if UserDefaults.standard.string(forKey: "id") == nil {
-            guard let vc = storyboard?.instantiateViewController(withIdentifier: "RegeisterVC") else { return }
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: nil)
+        if receivedBool == false {
+            if UserDefaults.standard.string(forKey: "id") == nil {
+                guard let vc = storyboard?.instantiateViewController(withIdentifier: "RegeisterVC") else { return }
+                vc.modalPresentationStyle = .fullScreen
+                present(vc, animated: true, completion: nil)
+            }
         }
     }
+    
     @IBAction func showColorXib(_ sender: Any) {
         hiddenView.isHidden = false
         chooseColorView.isHidden = false
@@ -44,6 +40,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func pickColor(data: UIColor) {
         settingBtn.setTitleColor(data, for: .normal)
+    }
+    
+    func bringNickName(data: String) {
+        nickNameLbl.text = data
     }
     
     
@@ -65,4 +65,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
 }
-
+ 
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = listTable.dequeueReusableCell(withIdentifier: "TaskViewCell", for: indexPath) as! TaskViewCell
+        return cell
+    }
+}

@@ -9,9 +9,9 @@
 import Firebase
 import UIKit
 
-class StartViewController: UIViewController, UITextFieldDelegate {
+class StartViewController: UIViewController {
     
-    var delegate: bringNickName?
+    //var delegate: bringNickName?
     var isAutoLogin = false
     
     @IBOutlet weak var hiddenViewForXib: UIView!
@@ -29,6 +29,7 @@ class StartViewController: UIViewController, UITextFieldDelegate {
         hiddenViewForXib.isHidden = true
         logInEmailTextField.delegate = self
         logInPWTextField.delegate = self
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisa(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -58,26 +59,30 @@ class StartViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(action)
             present(alert, animated: false)
         } else {
-            // 로그인 후 mainVC로 이동
             Auth.auth().signIn(withEmail: logInEmailTextField.text!, password: logInPWTextField.text!) { [weak self] authResult, error in
                 guard self != nil else { return }
                 if let error = error {
                     print(error.localizedDescription)
                     return
                 } else {
-                    guard let vc = self?.storyboard?.instantiateViewController(identifier: "MainVC") else { return }
+                    guard let vc = self?.storyboard?.instantiateViewController(identifier: "MainVC") as? MainViewController else { return }
+                    vc.receivedBool = true
+                    vc.modalPresentationStyle = .fullScreen
                     self?.present(vc, animated: true, completion: nil)
-                    
                 }
             }
         }
     }
     
     @IBAction func showRegisterXib(_ sender: UIButton) {
+        self.view.addSubview(register)
         register?.isHidden = false
         hiddenViewForXib.isHidden = false
+        // 회원가입 창 떴을 때 바탕 터치하면 창 사라지기
     }
-    
+}
+
+extension StartViewController: UITextFieldDelegate {
     @objc func keyboardWillShow(_ sender: Notification) {
         self.view.frame.origin.y = -150
     }
@@ -97,6 +102,3 @@ class StartViewController: UIViewController, UITextFieldDelegate {
 }
 
 protocol bringNickName { func bringNickName(data: String) }
-
-// 회원가입 창 떴을 때 바탕 터치하면 창 사라지기
-// 스타트 VC 모달이 아닌 VC로 보여지기 

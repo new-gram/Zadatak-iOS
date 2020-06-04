@@ -19,47 +19,25 @@
                 <outlet property="registerNameTextField" destination="53c-5a-H4P" id="0yv-NC-U2x"/>
                 <outlet property="registerPWTextField" destination="6gA-nl-cGM" id="r88-Jh-2ZB"/>
                 <outlet property="registerTitleLbl" destination="YbL-5i-O0e" id="6sY-k1-CYK"/>
+                <outlet property="registerView" destination="4Uw-Py-MnJ" id="bn0-MD-gLc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="4Uw-Py-MnJ" customClass="RegisterView" customModule="Zadatak_" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="410" height="326"/>
+        <view contentMode="scaleToFill" id="4Uw-Py-MnJ">
+            <rect key="frame" x="0.0" y="0.0" width="561" height="379"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" id="gvK-pN-G60">
-                    <rect key="frame" x="44" y="95" width="312" height="162"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" minimumFontSize="17" id="53c-5a-H4P">
-                            <rect key="frame" x="0.0" y="0.0" width="312" height="40.666666666666664"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PBu-f5-A6f">
-                            <rect key="frame" x="0.0" y="60.666666666666671" width="312" height="40.666666666666671"/>
-                            <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="17"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-nl-cGM">
-                            <rect key="frame" x="0.0" y="121.33333333333333" width="312" height="40.666666666666671"/>
-                            <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="17"/>
-                            <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
-                        </textField>
-                    </subviews>
-                </stackView>
                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMy-a1-05l">
-                    <rect key="frame" x="102.66666666666669" y="271" width="205" height="30"/>
+                    <rect key="frame" x="178" y="279.33333333333331" width="205" height="95.666666666666686"/>
                     <state key="normal" title="Just let me register right now!">
                         <color key="titleColor" red="0.99607843139999996" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
-                        <action selector="register:" destination="4Uw-Py-MnJ" eventType="touchUpInside" id="6N1-2O-Oxs"/>
                         <action selector="register:" destination="-1" eventType="touchUpInside" id="EcA-Xb-8r7"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbL-5i-O0e">
-                    <rect key="frame" x="0.0" y="0.0" width="410" height="82"/>
+                    <rect key="frame" x="0.0" y="0.0" width="561" height="112.33333333333333"/>
                     <color key="backgroundColor" red="0.99607843139999996" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="YbL-5i-O0e" secondAttribute="height" multiplier="5:1" id="N7U-e2-m9z"/>
@@ -68,27 +46,43 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="CHm-h9-bco">
+                    <rect key="frame" x="148.99999999999997" y="122.33333333333331" width="263.33333333333326" height="147"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PBu-f5-A6f">
+                            <rect key="frame" x="0.0" y="0.0" width="263.33333333333331" height="47.666666666666664"/>
+                            <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" minimumFontSize="17" id="53c-5a-H4P">
+                            <rect key="frame" x="0.0" y="49.666666666666671" width="263.33333333333331" height="47.666666666666671"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-nl-cGM">
+                            <rect key="frame" x="0.0" y="99.333333333333329" width="263.33333333333331" height="47.666666666666671"/>
+                            <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                        </textField>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="CHm-h9-bco" firstAttribute="centerX" secondItem="4Uw-Py-MnJ" secondAttribute="centerX" id="53v-hx-K0k"/>
                 <constraint firstItem="MMy-a1-05l" firstAttribute="centerX" secondItem="UxU-Q9-FKl" secondAttribute="centerX" id="71C-aX-K6h"/>
                 <constraint firstItem="YbL-5i-O0e" firstAttribute="leading" secondItem="UxU-Q9-FKl" secondAttribute="leading" id="GxG-VR-voC"/>
                 <constraint firstItem="YbL-5i-O0e" firstAttribute="top" secondItem="4Uw-Py-MnJ" secondAttribute="top" id="Iyt-Di-NTv"/>
-                <constraint firstItem="MMy-a1-05l" firstAttribute="top" secondItem="gvK-pN-G60" secondAttribute="bottom" constant="14" id="TeS-NW-mWF"/>
-                <constraint firstItem="gvK-pN-G60" firstAttribute="top" secondItem="4Uw-Py-MnJ" secondAttribute="top" constant="95" id="b0P-fd-I7n"/>
+                <constraint firstItem="UxU-Q9-FKl" firstAttribute="bottom" secondItem="MMy-a1-05l" secondAttribute="bottom" constant="4" id="NHG-Ss-GSy"/>
+                <constraint firstItem="MMy-a1-05l" firstAttribute="top" secondItem="CHm-h9-bco" secondAttribute="bottom" constant="10" id="VMS-EE-2s2"/>
                 <constraint firstItem="YbL-5i-O0e" firstAttribute="trailing" secondItem="UxU-Q9-FKl" secondAttribute="trailing" id="qS5-XJ-7x5"/>
+                <constraint firstItem="CHm-h9-bco" firstAttribute="top" secondItem="YbL-5i-O0e" secondAttribute="bottom" constant="10" id="rGh-JJ-Pdn"/>
                 <constraint firstItem="YbL-5i-O0e" firstAttribute="centerX" secondItem="UxU-Q9-FKl" secondAttribute="centerX" id="rMf-dv-6Mv"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="UxU-Q9-FKl"/>
-            <connections>
-                <outlet property="registerBtn" destination="MMy-a1-05l" id="r9W-KU-0QN"/>
-                <outlet property="registerEmailTextField" destination="PBu-f5-A6f" id="Y36-Kl-Moj"/>
-                <outlet property="registerNameTextField" destination="53c-5a-H4P" id="G42-d3-0aA"/>
-                <outlet property="registerPWTextField" destination="6gA-nl-cGM" id="z51-GV-Gwi"/>
-                <outlet property="registerTitleLbl" destination="YbL-5i-O0e" id="PVh-RD-mYv"/>
-            </connections>
-            <point key="canvasLocation" x="-514.49275362318849" y="178.53260869565219"/>
+            <point key="canvasLocation" x="-897.82608695652186" y="165.08152173913044"/>
         </view>
     </objects>
 </document>
