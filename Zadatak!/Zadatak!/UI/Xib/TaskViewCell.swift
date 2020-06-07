@@ -1,24 +1,28 @@
-//
-//  TaskViewCell.swift
-//  Zadatak!
-//
-//  Created by 이현욱 on 2020/01/03.
-//  Copyright © 2020 이현욱. All rights reserved.
-//
-
 import UIKit
 
+protocol TaskViewCellDelegate {
+    func taskDeleted(_ sender: UIButton, trueOrFalse: Bool)
+}
+
 class TaskViewCell: UITableViewCell {
+    
+    var delegate: TaskViewCellDelegate?
+    var btnColor: UIColor?
+    var deleteCheckBtnState: Bool?
     
     @IBOutlet weak var dot: UIView!
     @IBOutlet weak var taskTextField: UITextField!
     @IBOutlet weak var taskCheckBtn: UIButton!
     
-    //    override func viewToCircle() -> UIView {
-    //        dot.layer.cornerRadius = 0.5 * dot.bounds.size.width
-    //        return dot
-    //    }
-    //    
+    
+    @IBAction func finishWork(_ sender: UIButton) {
+        if !taskCheckBtn.isSelected {
+            taskCheckBtn.isSelected = !taskCheckBtn.isSelected
+            deleteCheckBtnState = true
+            delegate?.taskDeleted(sender, trueOrFalse: deleteCheckBtnState!)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         dot.viewToCircle()
@@ -27,5 +31,4 @@ class TaskViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }

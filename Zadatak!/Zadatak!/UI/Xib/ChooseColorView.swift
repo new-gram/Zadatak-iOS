@@ -1,8 +1,9 @@
 import UIKit
-
-class ChooseColorView: UIView { 
+// 색, 로그아웃
+class ChooseColorView: UIView {
     
-    var delegate: sendColorDelegate!
+    var color: UIColor?
+    var delegate: ChooseColorViewDelegate?
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var colorInfoLabel: UILabel!
@@ -15,15 +16,12 @@ class ChooseColorView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commitInit()
     }
-    
-    
     
     func commitInit() {
         guard let xibName = NSStringFromClass(self.classForCoder).components(separatedBy: ".").last else { return }
@@ -34,15 +32,19 @@ class ChooseColorView: UIView {
     }
     
     @IBAction func logOut() {
-        UserDefaults.standard.removeObject(forKey: "id")
-        UserDefaults.standard.removeObject(forKey: "pw")
-        // StartView로 이동
+        delegate?.logOut()
     }
     
     @IBAction func chooseColor(_ sender: UIButton) {
-        let color = sender.currentTitleColor
-        delegate?.pickColor(data: color)
+        color = sender.currentTitleColor
+        colorInfoLabel.text = sender.currentTitleColor as? String
+        optionLabel.backgroundColor = color
+        logOutBtn.titleLabel?.textColor = color
+        delegate?.sendColor(color: color!)
     }
 }
 
-protocol sendColorDelegate { func pickColor(data: UIColor) }
+protocol ChooseColorViewDelegate {
+    func sendColor(color: UIColor)
+    func logOut()
+}

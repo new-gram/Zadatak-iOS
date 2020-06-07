@@ -2,8 +2,10 @@ import UIKit
 import Firebase
 
 class RegisterView: UIView {
-    
+
     let color = UIColor()
+    var errorDelegate: RegisterViewDelegate?
+    var bringNickNameDelegate: BringNickNameDelegate?
     
     @IBOutlet weak var registerView: RegisterView!
     @IBOutlet weak var registerTitleLbl: UILabel!
@@ -14,7 +16,6 @@ class RegisterView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
     }
     
     required init?(coder: NSCoder) {
@@ -34,21 +35,23 @@ class RegisterView: UIView {
     }
     
     @IBAction func register(_ sender: UIButton) {
-        if (registerEmailTextField.text == nil || false) || (registerNameTextField.text == nil || false) || (registerPWTextField.text == nil || false) {
+        if (registerEmailTextField.text != nil) || (registerNameTextField.text != nil) || (registerPWTextField.text != nil ) {
             Auth.auth().createUser(withEmail: registerEmailTextField.text!, password: registerPWTextField.text!) { authResult, error in
-                guard let user = authResult?.user, error == nil else {
+                guard let _ = authResult?.user, error == nil else {
                     print(error!.localizedDescription)
+                    self.errorDelegate?.registerError(data: true)
+                    // 실패하면 startVC에 신호줘서 알람뜨게, nickName을 가져와야 함
                     return
                 }
-                print("\(user.email!) created")
-                self.removeFromSuperview()
+                self.errorDelegate?.registerError(data: false)
+                UserDefaults.standard.set(self.registerNameTextField.text, forKey: "Name")
             }
         }
     }
 }
 
-
-
+protocol RegisterViewDelegate { func registerError(data: Bool) }
+protocol BringNickNameDelegate { func bringNickName(data: String) }
 
 
 

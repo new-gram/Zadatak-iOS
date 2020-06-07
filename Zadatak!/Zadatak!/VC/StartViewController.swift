@@ -11,9 +11,9 @@ import UIKit
 
 class StartViewController: UIViewController {
     
-    //var delegate: bringNickName?
     var isAutoLogin = false
-    
+
+    @IBOutlet weak var backgroundBtnWhenXibOn: UIButton!
     @IBOutlet weak var hiddenViewForXib: UIView!
     @IBOutlet weak var register: RegisterView!
     @IBOutlet weak var logInEmailTextField: UITextField!
@@ -29,13 +29,14 @@ class StartViewController: UIViewController {
         hiddenViewForXib.isHidden = true
         logInEmailTextField.delegate = self
         logInPWTextField.delegate = self
-        
+        register.errorDelegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisa(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        registerError(data: false)
     }
     
     @IBAction func autoLogin() {
-        if keepLogInBtn.isSelected == true {
+        if keepLogInBtn.isSelected {
             isAutoLogin = true
             keepLogInBtn.setBackgroundImage(UIImage(contentsOfFile: "checkmark.square.fill"), for: .selected)
         } else {
@@ -63,6 +64,10 @@ class StartViewController: UIViewController {
                 guard self != nil else { return }
                 if let error = error {
                     print(error.localizedDescription)
+                    let alert = UIAlertController(title: "로그인 실패", message: "아이디 혹은 비밀번호가 틀렸거나, 아이디가 없습니다", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alert.addAction(action)
+                    self?.present(alert, animated: false)
                     return
                 } else {
                     guard let vc = self?.storyboard?.instantiateViewController(identifier: "MainVC") as? MainViewController else { return }
@@ -75,14 +80,29 @@ class StartViewController: UIViewController {
     }
     
     @IBAction func showRegisterXib(_ sender: UIButton) {
-        self.view.addSubview(register)
         register?.isHidden = false
         hiddenViewForXib.isHidden = false
         // 회원가입 창 떴을 때 바탕 터치하면 창 사라지기
     }
+    @IBAction func tabbedBackground(_ sender: UIButton) {
+        register.isHidden = true
+        hiddenViewForXib.isHidden = true
+    }
 }
 
-extension StartViewController: UITextFieldDelegate {
+extension StartViewController: UITextFieldDelegate, RegisterViewDelegate {
+    func registerError(data: Bool) {
+        if data {
+            let alert = UIAlertController(title: "로그인 실패", message: "아이디가 있거나 형식이 틀렸습니다.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        } else {
+            register.isHidden = true
+            hiddenViewForXib.isHidden = true
+        }
+    }
+    
     @objc func keyboardWillShow(_ sender: Notification) {
         self.view.frame.origin.y = -150
     }
@@ -100,5 +120,3 @@ extension StartViewController: UITextFieldDelegate {
         self.view.endEditing(true)
     }
 }
-
-protocol bringNickName { func bringNickName(data: String) }
