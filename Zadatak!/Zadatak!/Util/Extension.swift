@@ -9,10 +9,8 @@
 import UIKit
 
 extension UIButton {
-    func btnToCircle() -> UIButton {
-        let btn = UIButton()
-        btn.layer.cornerRadius = 0.5 * btn.bounds.size.width
-        return btn
+    func btnToCircle() {
+        self.layer.cornerRadius = 0.5 * self.bounds.size.width
     }
     
     func changeBtnSize() {
@@ -24,16 +22,8 @@ extension UIButton {
 }
 
 extension UIView {
-    func chooseColor(btn: UIButton) -> UIView {
-        let view = UIView()
-        view.backgroundColor = btn.backgroundColor
-        return view
-    }
-    
-    func viewToCircle() -> UIView {
-        let view = UIView()
-        view.layer.cornerRadius = 0.7 * view.bounds.size.width
-        return view
+    func viewToCircle(){
+        self.layer.cornerRadius = 0.7 * self.bounds.size.width
     }
     
     func makeShadow() {

@@ -12,9 +12,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var hiddenBtn: UIButton!
     @IBOutlet weak var settingBtn: UIButton!
     @IBOutlet weak var listTable: UITableView!
-  
+    
     override func viewDidLoad() {
-        
+        chooseColorView.colorDelegate = self
         super.viewDidLoad()
         listTable.dataSource = self
         listTable.delegate = self
@@ -46,11 +46,18 @@ class MainViewController: UIViewController {
         isHiddenTrueOrFalse(value: true)
     }
 }
-    
-extension MainViewController: UITableViewDelegate, UITableViewDataSource, ChooseColorDelegate {
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource, ChooseColorDelegate,TaskViewCellDelegate {
+    func taskDeleted(_ sender: UIButton) {
+        let point = sender.convert(CGPoint.zero, to: listTable)
+          guard let indexPath = listTable.indexPathForRow(at: point) else { return }
+          data.remove(at: indexPath.row)
+          listTable.deleteRows(at: [indexPath], with: .automatic)
+    }
     
     func sendColor(color: UIColor) {
         settingBtn.tintColor = color
+        addTaskBtn.tintColor = color
     }
     
     func logOut() {
@@ -68,7 +75,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, Choose
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = listTable.dequeueReusableCell(withIdentifier: "TaskViewCell", for: indexPath) as! TaskViewCell
-        cell.textLabel?.text = data[indexPath.row]
         return cell
     }
     
@@ -82,18 +88,22 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, Choose
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
-//
-//    lazy var progressView: UIProgressView = { // Create a ProgressView.
-//    let pv: UIProgressView = UIProgressView(frame: CGRect(x:0, y:0, width:280, height:30))
-//    NSLayoutConstraint.activate([
-//    pv.leftAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20.0)
-//    ])
-//    pv.progressTintColor = UIColor.green
-//    pv.trackTintColor = UIColor.white // Set the coordinates.
-//    pv.layer.position = CGPoint(x: self.view.frame.width/2, y: 200) // Set the height of the bar (1.0 times horizontally, 2.0 times vertically).
-//    pv.transform = CGAffineTransform(scaleX: 1.0, y: 2.0) // Set the progress degree (0.0 to 1.0).
-//    pv.progress = 0.0 // Add an animation.
-//    pv.setProgress(1.0, animated: true)
-//    return pv
-//    }()
+    
+    
+    
+    
+    
+    //    lazy var progressView: UIProgressView = { // Create a ProgressView.
+    //    let pv: UIProgressView = UIProgressView(frame: CGRect(x:0, y:0, width:280, height:30))
+    //    NSLayoutConstraint.activate([
+    //    pv.leftAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20.0)
+    //    ])
+    //    pv.progressTintColor = UIColor.green
+    //    pv.trackTintColor = UIColor.white // Set the coordinates.
+    //    pv.layer.position = CGPoint(x: self.view.frame.width/2, y: 200) // Set the height of the bar (1.0 times horizontally, 2.0 times vertically).
+    //    pv.transform = CGAffineTransform(scaleX: 1.0, y: 2.0) // Set the progress degree (0.0 to 1.0).
+    //    pv.progress = 0.0 // Add an animation.
+    //    pv.setProgress(1.0, animated: true)
+    //    return pv
+    //    }()
 }
