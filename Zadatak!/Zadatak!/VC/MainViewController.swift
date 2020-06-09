@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var listTable: UITableView!
   
     override func viewDidLoad() {
-        chooseColorView.delegate = self
+        chooseColorViewd = self
         super.viewDidLoad()
         listTable.dataSource = self
         listTable.delegate = self
