@@ -12,9 +12,9 @@ import UIKit
 class StartViewController: UIViewController {
     
     var isAutoLogin = false
+    let ud = UserDefaults.standard
 
     @IBOutlet weak var backgroundBtnWhenXibOn: UIButton!
-    @IBOutlet weak var hiddenViewForXib: UIView!
     @IBOutlet weak var register: RegisterView!
     @IBOutlet weak var logInEmailTextField: UITextField!
     @IBOutlet weak var logInPWTextField: UITextField!
@@ -25,8 +25,7 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        register?.isHidden = true
-        hiddenViewForXib.isHidden = true
+        isHiddenTrueOrFalse(value: true)
         logInEmailTextField.delegate = self
         logInPWTextField.delegate = self
         register.errorDelegate = self
@@ -45,8 +44,8 @@ class StartViewController: UIViewController {
         }
         if self.isAutoLogin{
             if logInEmailTextField.text != "" || logInPWTextField.text != "" {
-                UserDefaults.standard.set(logInEmailTextField.text, forKey: "id")
-                UserDefaults.standard.set(logInPWTextField.text, forKey: "pwd")
+                ud.set(logInEmailTextField.text, forKey: "id")
+                ud.set(logInPWTextField.text, forKey: "pwd")
             }
         }
         keepLogInBtn.isSelected = !keepLogInBtn.isSelected
@@ -55,19 +54,13 @@ class StartViewController: UIViewController {
     
     @IBAction func login(_ sender: UIButton) {
         if logInEmailTextField.text == "" || logInPWTextField.text == "" {
-            let alert = UIAlertController(title: "로그인 실패", message: "아이디 혹은 비밀번호가 비었습니다.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(action)
-            present(alert, animated: false)
+            presentAlert(Title: "로그인 실패", Message: "아이디 혹은 비밀번호가 비었습니다.")
         } else {
             Auth.auth().signIn(withEmail: logInEmailTextField.text!, password: logInPWTextField.text!) { [weak self] authResult, error in
                 guard self != nil else { return }
                 if let error = error {
                     print(error.localizedDescription)
-                    let alert = UIAlertController(title: "로그인 실패", message: "아이디 혹은 비밀번호가 틀렸거나, 아이디가 없습니다", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alert.addAction(action)
-                    self?.present(alert, animated: false)
+                    self!.presentAlert(Title: "로그인 실패", Message: "아이디 혹은 비밀번호가 틀렸거나, 아이디가 없습니다")
                     return
                 } else {
                     guard let vc = self?.storyboard?.instantiateViewController(identifier: "MainVC") as? MainViewController else { return }
@@ -80,27 +73,33 @@ class StartViewController: UIViewController {
     }
     
     @IBAction func showRegisterXib(_ sender: UIButton) {
-        register?.isHidden = false
-        hiddenViewForXib.isHidden = false
+        isHiddenTrueOrFalse(value: false)
         // 회원가입 창 떴을 때 바탕 터치하면 창 사라지기
     }
     @IBAction func tabbedBackground(_ sender: UIButton) {
-        register.isHidden = true
-        hiddenViewForXib.isHidden = true
+        isHiddenTrueOrFalse(value: true)
     }
 }
 
 extension StartViewController: UITextFieldDelegate, RegisterViewDelegate {
     func registerError(data: Bool) {
         if data {
-            let alert = UIAlertController(title: "로그인 실패", message: "아이디가 있거나 형식이 틀렸습니다.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(action)
-            present(alert, animated: true, completion: nil)
+            presentAlert(Title: "로그인 실패", Message: "아이디가 있거나 형식이 틀렸습니다.")
         } else {
-            register.isHidden = true
-            hiddenViewForXib.isHidden = true
+            isHiddenTrueOrFalse(value: true)
         }
+    }
+    
+    func presentAlert(Title: String, Message: String) {
+        let alert = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func isHiddenTrueOrFalse(value: Bool) {
+        register.isHidden = value
+        backgroundBtnWhenXibOn.isHidden = value
     }
     
     @objc func keyboardWillShow(_ sender: Notification) {

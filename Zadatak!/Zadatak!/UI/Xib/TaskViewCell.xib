@@ -16,27 +16,38 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v4c-LX-hQT">
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v4c-LX-hQT">
                         <rect key="frame" x="16" y="17" width="10" height="10"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="v4c-LX-hQT" secondAttribute="height" multiplier="1:1" id="kx9-Z7-LHJ"/>
+                        </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-cb-W3w">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-cb-W3w">
                         <rect key="frame" x="289" y="11" width="20" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="2mh-cb-W3w" secondAttribute="height" multiplier="10:11" id="kB9-yQ-6Ak"/>
+                        </constraints>
                         <state key="normal" image="square" catalog="system"/>
                         <state key="selected" image="checkmark.square.fill" catalog="system"/>
                         <connections>
                             <action selector="finishWork:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Sil-ox-jtr"/>
                         </connections>
                     </button>
-                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-VL-PEA">
+                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-VL-PEA">
                         <rect key="frame" x="46" y="5" width="228" height="34"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="v4c-LX-hQT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6o4-3W-9G9"/>
+                    <constraint firstAttribute="bottom" secondItem="Vhv-VL-PEA" secondAttribute="bottom" constant="5" id="Gst-UA-dL5"/>
+                    <constraint firstItem="2mh-cb-W3w" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ISt-uu-dOQ"/>
+                    <constraint firstItem="Vhv-VL-PEA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="QUG-AH-0i3"/>
+                    <constraint firstAttribute="trailing" secondItem="2mh-cb-W3w" secondAttribute="trailing" constant="11" id="W7g-lQ-L8A"/>
+                    <constraint firstItem="v4c-LX-hQT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zXa-Oa-czd"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

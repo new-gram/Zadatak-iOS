@@ -1,6 +1,9 @@
 import UIKit
 import Firebase
 
+protocol RegisterViewDelegate { func registerError(data: Bool) }
+protocol BringNickNameDelegate { func bringNickName(data: String) }
+
 class RegisterView: UIView {
 
     let color = UIColor()
@@ -49,9 +52,5 @@ class RegisterView: UIView {
         }
     }
 }
-
-protocol RegisterViewDelegate { func registerError(data: Bool) }
-protocol BringNickNameDelegate { func bringNickName(data: String) }
-
 
 

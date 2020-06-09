@@ -1,9 +1,13 @@
 import UIKit
-// 색, 로그아웃
+
+protocol ChooseColorDelegate { func sendColor(color: UIColor) }
+protocol DisMissNib { func logOut() }
+
 class ChooseColorView: UIView {
     
     var color: UIColor?
-    var delegate: ChooseColorViewDelegate?
+    var colorDelegate: ChooseColorDelegate?
+    var logOutDelegate: DisMissNib?
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var colorInfoLabel: UILabel!
@@ -32,7 +36,7 @@ class ChooseColorView: UIView {
     }
     
     @IBAction func logOut() {
-        delegate?.logOut()
+        logOutDelegate?.logOut()
     }
     
     @IBAction func chooseColor(_ sender: UIButton) {
@@ -40,11 +44,7 @@ class ChooseColorView: UIView {
         colorInfoLabel.text = sender.currentTitleColor as? String
         optionLabel.backgroundColor = color
         logOutBtn.titleLabel?.textColor = color
-        delegate?.sendColor(color: color!)
+        colorDelegate?.sendColor(color: color!)
     }
 }
 
-protocol ChooseColorViewDelegate {
-    func sendColor(color: UIColor)
-    func logOut()
-}
