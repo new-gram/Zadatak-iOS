@@ -33,7 +33,6 @@ class ChooseColorView: UIView {
         view.frame = self.bounds
         view.makeShadow()
         self.addSubview(view)
-      //  NotificationCenter.default.addObserver(self, selector: #selector(chooseColor(_:)), name: <#T##NSNotification.Name?#>, object: <#T##Any?#>)
     }
     
     @IBAction func logOut() {
@@ -42,7 +41,17 @@ class ChooseColorView: UIView {
     
     @IBAction func chooseColor(_ sender: UIButton) {
         color = sender.currentTitleColor
-        //colorInfoLabel.text = sender.currentTitleColor as? String
+        let btnColor = sender.tag
+            switch btnColor {
+            case 1:
+                colorInfoLabel.text = "Green"
+            case 2:
+                colorInfoLabel.text = "Blue"
+            case 3:
+                colorInfoLabel.text = "Red"
+            default:
+                colorInfoLabel.text = "Black"
+            }
         optionLabel.backgroundColor = color
         logOutBtn.titleLabel?.textColor = color
         colorDelegate?.sendColor(color: color!)

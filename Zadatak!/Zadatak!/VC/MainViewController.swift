@@ -46,7 +46,6 @@ class MainViewController: UIViewController {
         listTable.reloadData()
         reloadTaskProgress()
         dataCount += 1
-        print("dataCount:\(dataCount)")
     }
     
     @IBAction func showColorXib(_ sender: Any) {
@@ -67,6 +66,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIText
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             data.remove(at: indexPath.row)
+            doneTask += 1
+            print(doneTask)
             listTable.deleteRows(at: [indexPath], with: .automatic)
         }
     }
@@ -94,7 +95,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIText
         if dataCount == 0 {
             taskProgress.progress = 0.0
         } else {
-            taskProgress.progress = Float(doneTask)/Float(dataCount)
+            taskProgress.progress = Float(doneTask)/Float(dataCount) //doneTask가 0으로 지속됨
             print(Float(doneTask)/Float(dataCount))
         }
     }
