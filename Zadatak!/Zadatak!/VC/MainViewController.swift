@@ -44,8 +44,8 @@ class MainViewController: UIViewController {
     @IBAction func addTask(_ sender: UIButton) {
         data.append("")
         listTable.reloadData()
-        reloadTaskProgress()
         dataCount += 1
+        reloadTaskProgress()
     }
     
     @IBAction func showColorXib(_ sender: Any) {
@@ -67,8 +67,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIText
         if editingStyle == .delete {
             data.remove(at: indexPath.row)
             doneTask += 1
-            print(doneTask)
             listTable.deleteRows(at: [indexPath], with: .automatic)
+            reloadTaskProgress()
         }
     }
     
@@ -96,7 +96,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIText
             taskProgress.progress = 0.0
         } else {
             taskProgress.progress = Float(doneTask)/Float(dataCount) //doneTask가 0으로 지속됨
-            print(Float(doneTask)/Float(dataCount))
         }
     }
     
