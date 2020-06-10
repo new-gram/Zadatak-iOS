@@ -2,10 +2,14 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    var storedColor: UIColor?
     let ud = UserDefaults.standard
     var receivedBool = false
     var data = [String]()
+    var dataCount = 0
+    var doneTask = 0
     
+    @IBOutlet weak var taskProgress: UIProgressView!
     @IBOutlet weak var addTaskBtn: UIButton!
     @IBOutlet weak var nickNameLbl: UILabel!
     @IBOutlet weak var chooseColorView: ChooseColorView!
@@ -15,15 +19,18 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         chooseColorView.colorDelegate = self
+        chooseColorView.logOutDelegate = self
         super.viewDidLoad()
         listTable.dataSource = self
         listTable.delegate = self
         listTable.tableFooterView = UIView.init(frame: .infinite)
         isHiddenTrueOrFalse(value: true)
         nickNameLbl.text = ud.string(forKey: "Name")
-        //self.view.addSubview(progressView)
         let nibName = UINib(nibName: "TaskViewCell", bundle: nil)
         listTable.register(nibName, forCellReuseIdentifier: "TaskViewCell")
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisa(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        taskProgress.setProgress(0.0, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,45 +44,59 @@ class MainViewController: UIViewController {
     @IBAction func addTask(_ sender: UIButton) {
         data.append("")
         listTable.reloadData()
+        reloadTaskProgress()
+        dataCount += 1
+        print("dataCount:\(dataCount)")
     }
     
     @IBAction func showColorXib(_ sender: Any) {
         isHiddenTrueOrFalse(value: false)
     }
+    
     @IBAction func disMissNib(_ sender: UIButton) {
         isHiddenTrueOrFalse(value: true)
     }
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource, ChooseColorDelegate,TaskViewCellDelegate {
-    func taskDeleted(_ sender: UIButton) {
-        let point = sender.convert(CGPoint.zero, to: listTable)
-          guard let indexPath = listTable.indexPathForRow(at: point) else { return }
-          data.remove(at: indexPath.row)
-          listTable.deleteRows(at: [indexPath], with: .automatic)
-    }
-    
-    func sendColor(color: UIColor) {
-        settingBtn.tintColor = color
-        addTaskBtn.tintColor = color
-    }
-    
-    func logOut() {
-        chooseColorView.isHidden = true
-        hiddenBtn.isHidden = true
-        ud.removeObject(forKey: "id")
-        ud.removeObject(forKey: "pwd")
-        ud.removeObject(forKey: "Name")
-        presentVC(identifier: "RegeisterVC")
-    }
-    
+extension MainViewController: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, ChooseColorDelegate, DisMissNib {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count;
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            data.remove(at: indexPath.row)
+            listTable.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = listTable.dequeueReusableCell(withIdentifier: "TaskViewCell", for: indexPath) as! TaskViewCell
         return cell
+    }
+    
+    func logOut(value: Bool) {
+        isHiddenTrueOrFalse(value: value)
+        ud.removeObject(forKey: "id")
+        ud.removeObject(forKey: "pwd")
+        presentVC(identifier: "RegeisterVC")
+    }
+    
+    func sendColor(color: UIColor) {
+        storedColor = color
+        taskProgress.tintColor = storedColor
+        settingBtn.tintColor = storedColor
+        addTaskBtn.tintColor = storedColor
+    }
+    
+    func reloadTaskProgress() {
+        if dataCount == 0 {
+            taskProgress.progress = 0.0
+        } else {
+            taskProgress.progress = Float(doneTask)/Float(dataCount)
+            print(Float(doneTask)/Float(dataCount))
+        }
     }
     
     func isHiddenTrueOrFalse(value: Bool) {
@@ -89,21 +110,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, Choose
         present(vc, animated: true, completion: nil)
     }
     
+    @objc func keyboardWillShow(_ sender: Notification) {
+        self.view.frame.origin.y = -150
+    }
     
+    @objc func keyboardWillDisa(_ sender: Notification) {
+        self.view.frame.origin.y = 0
+    }
     
-    
-    
-    //    lazy var progressView: UIProgressView = { // Create a ProgressView.
-    //    let pv: UIProgressView = UIProgressView(frame: CGRect(x:0, y:0, width:280, height:30))
-    //    NSLayoutConstraint.activate([
-    //    pv.leftAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.leftAnchor, constant: 20.0)
-    //    ])
-    //    pv.progressTintColor = UIColor.green
-    //    pv.trackTintColor = UIColor.white // Set the coordinates.
-    //    pv.layer.position = CGPoint(x: self.view.frame.width/2, y: 200) // Set the height of the bar (1.0 times horizontally, 2.0 times vertically).
-    //    pv.transform = CGAffineTransform(scaleX: 1.0, y: 2.0) // Set the progress degree (0.0 to 1.0).
-    //    pv.progress = 0.0 // Add an animation.
-    //    pv.setProgress(1.0, animated: true)
-    //    return pv
-    //    }()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
 }

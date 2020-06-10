@@ -1,7 +1,7 @@
 import UIKit
 
 protocol ChooseColorDelegate { func sendColor(color: UIColor) }
-protocol DisMissNib { func logOut() }
+protocol DisMissNib { func logOut(value: Bool) }
 
 class ChooseColorView: UIView {
     
@@ -33,15 +33,16 @@ class ChooseColorView: UIView {
         view.frame = self.bounds
         view.makeShadow()
         self.addSubview(view)
+      //  NotificationCenter.default.addObserver(self, selector: #selector(chooseColor(_:)), name: <#T##NSNotification.Name?#>, object: <#T##Any?#>)
     }
     
     @IBAction func logOut() {
-        logOutDelegate?.logOut()
+        logOutDelegate?.logOut(value: true)
     }
     
     @IBAction func chooseColor(_ sender: UIButton) {
         color = sender.currentTitleColor
-        colorInfoLabel.text = sender.currentTitleColor as? String
+        //colorInfoLabel.text = sender.currentTitleColor as? String
         optionLabel.backgroundColor = color
         logOutBtn.titleLabel?.textColor = color
         colorDelegate?.sendColor(color: color!)

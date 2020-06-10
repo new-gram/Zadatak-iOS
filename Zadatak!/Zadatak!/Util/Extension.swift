@@ -8,19 +8,6 @@
 
 import UIKit
 
-extension UIButton {
-    func btnToCircle() {
-        self.layer.cornerRadius = 0.5 * self.bounds.size.width
-    }
-    
-    func changeBtnSize() {
-        let myButton = UIButton()
-        myButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        myButton.titleLabel?.numberOfLines = 0
-        myButton.titleLabel?.minimumScaleFactor = 0.6
-    }
-}
-
 extension UIView {
     func viewToCircle(){
         self.layer.cornerRadius = 0.7 * self.bounds.size.width
