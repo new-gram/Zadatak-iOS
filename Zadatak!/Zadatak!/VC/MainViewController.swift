@@ -4,7 +4,7 @@ class MainViewController: UIViewController {
     
     var storedColor: UIColor?
     let ud = UserDefaults.standard
-    var receivedBool = false
+    var receivedBool: Bool?
     var data = [String]()
     var dataCount = 0
     var doneTask = 0
@@ -18,6 +18,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var listTable: UITableView!
     
     override func viewDidLoad() {
+        dataCount = 0
+        doneTask = 0
         chooseColorView.colorDelegate = self
         chooseColorView.logOutDelegate = self
         super.viewDidLoad()
@@ -34,7 +36,8 @@ class MainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if receivedBool == false {
+        if receivedBool == false || receivedBool == nil {
+            ud.removeObject(forKey: "id")
             if ud.string(forKey: "id") == nil {
                 presentVC(identifier: "RegeisterVC")
             }
@@ -95,7 +98,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIText
         if dataCount == 0 {
             taskProgress.progress = 0.0
         } else {
-            taskProgress.progress = Float(doneTask)/Float(dataCount) //doneTask가 0으로 지속됨
+            taskProgress.progress = Float(doneTask)/Float(dataCount)
         }
     }
     

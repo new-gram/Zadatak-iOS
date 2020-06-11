@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -37,7 +37,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbL-5i-O0e">
-                    <rect key="frame" x="0.0" y="0.0" width="317" height="63.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="317" height="63.333333333333336"/>
                     <color key="backgroundColor" red="0.99607843139999996" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="YbL-5i-O0e" secondAttribute="height" multiplier="5:1" id="N7U-e2-m9z"/>
@@ -47,21 +47,21 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CHm-h9-bco">
-                    <rect key="frame" x="26.5" y="73.5" width="264" height="147.5"/>
+                    <rect key="frame" x="26.666666666666657" y="70" width="264" height="148"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PBu-f5-A6f">
-                            <rect key="frame" x="0.0" y="0.0" width="264" height="42.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="264" height="42.666666666666664"/>
                             <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" minimumFontSize="17" id="53c-5a-H4P">
-                            <rect key="frame" x="0.0" y="52.5" width="264" height="42.5"/>
+                            <rect key="frame" x="0.0" y="52.666666666666671" width="264" height="42.666666666666671"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="17"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-nl-cGM">
-                            <rect key="frame" x="0.0" y="105" width="264" height="42.5"/>
+                            <rect key="frame" x="0.0" y="105.33333333333334" width="264" height="42.666666666666657"/>
                             <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="17"/>
                             <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                         </textField>
@@ -70,20 +70,18 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="CHm-h9-bco" firstAttribute="centerX" secondItem="4Uw-Py-MnJ" secondAttribute="centerX" id="53v-hx-K0k"/>
                 <constraint firstItem="MMy-a1-05l" firstAttribute="centerX" secondItem="UxU-Q9-FKl" secondAttribute="centerX" id="71C-aX-K6h"/>
                 <constraint firstItem="YbL-5i-O0e" firstAttribute="leading" secondItem="UxU-Q9-FKl" secondAttribute="leading" id="GxG-VR-voC"/>
                 <constraint firstItem="YbL-5i-O0e" firstAttribute="top" secondItem="4Uw-Py-MnJ" secondAttribute="top" id="Iyt-Di-NTv"/>
                 <constraint firstItem="UxU-Q9-FKl" firstAttribute="bottom" secondItem="MMy-a1-05l" secondAttribute="bottom" constant="4" id="NHG-Ss-GSy"/>
-                <constraint firstAttribute="trailingMargin" secondItem="CHm-h9-bco" secondAttribute="trailing" constant="10.5" id="Tal-ry-Gqq"/>
-                <constraint firstItem="CHm-h9-bco" firstAttribute="leadingMargin" secondItem="UxU-Q9-FKl" secondAttribute="leading" constant="26.5" id="YWe-IC-1U1"/>
+                <constraint firstItem="CHm-h9-bco" firstAttribute="centerX" secondItem="UxU-Q9-FKl" secondAttribute="centerX" id="Zgq-Ah-9fy"/>
+                <constraint firstItem="MMy-a1-05l" firstAttribute="top" secondItem="CHm-h9-bco" secondAttribute="bottom" constant="14" id="oo9-Xw-iFR"/>
                 <constraint firstItem="YbL-5i-O0e" firstAttribute="trailing" secondItem="UxU-Q9-FKl" secondAttribute="trailing" id="qS5-XJ-7x5"/>
                 <constraint firstItem="YbL-5i-O0e" firstAttribute="centerX" secondItem="UxU-Q9-FKl" secondAttribute="centerX" id="rMf-dv-6Mv"/>
-                <constraint firstItem="CHm-h9-bco" firstAttribute="top" secondItem="YbL-5i-O0e" secondAttribute="bottom" constant="10.000000000000014" id="vOz-Kr-9Zv"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="UxU-Q9-FKl"/>
-            <point key="canvasLocation" x="-1103.4375" y="423.59154929577466"/>
+            <point key="canvasLocation" x="-1103.6231884057972" y="423.21428571428572"/>
         </view>
     </objects>
 </document>
