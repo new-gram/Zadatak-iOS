@@ -1,15 +1,18 @@
 import UIKit
 
-protocol ChooseColorDelegate { func sendColor(color: UIColor) }
-protocol DisMissNib { func logOut(value: Bool) }
+// MARK: Delegates
 
-class ChooseColorView: UIView {
+// 지우자. 다른 방법을 찾아라. 비효율적이다.
+protocol DisMissNibDelegate { func logOut(value: Bool) }
+
+// MARK: ChooseColorView
+
+final class ChooseColorView: UIView {
     
-    var color: UIColor?
-    var colorDelegate: ChooseColorDelegate?
-    var logOutDelegate: DisMissNib?
+    var logOutDelegate: DisMissNibDelegate?
+    var color: UIColor!
     
-    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var colorInfoLabel: UILabel!
     @IBOutlet weak var optionLabel: UILabel!
     @IBOutlet weak var redColorBtn: UIButton!
@@ -24,10 +27,10 @@ class ChooseColorView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        commitInit()
+        commonInit()
     }
     
-    func commitInit() {
+    func commonInit() {
         guard let xibName = NSStringFromClass(self.classForCoder).components(separatedBy: ".").last else { return }
         let view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
@@ -41,20 +44,19 @@ class ChooseColorView: UIView {
     
     @IBAction func chooseColor(_ sender: UIButton) {
         color = sender.currentTitleColor
-        let btnColor = sender.tag
-            switch btnColor {
-            case 1:
-                colorInfoLabel.text = "Green"
-            case 2:
-                colorInfoLabel.text = "Blue"
-            case 3:
-                colorInfoLabel.text = "Red"
-            default:
-                colorInfoLabel.text = "Black"
-            }
         optionLabel.backgroundColor = color
         logOutBtn.titleLabel?.textColor = color
-        colorDelegate?.sendColor(color: color!)
+        colorInfoLabel.text = Color(rawValue: sender.tag)?.name
     }
 }
 
+enum Color: Int {
+    case Green = 1
+    case Blue = 2
+    case Red = 3
+    case Black = 4
+    
+    var name: String {
+        return String(describing: self)
+    }
+}

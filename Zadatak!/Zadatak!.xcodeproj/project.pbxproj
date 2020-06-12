@@ -15,6 +15,10 @@
 		D60738162480F87000B571AA /* 08SeoulNamsanL_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D60737FE2480F87000B571AA /* 08SeoulNamsanL_0.ttf */; };
 		D60738172480F87000B571AA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60738002480F87000B571AA /* MainViewController.swift */; };
 		D60738182480F87000B571AA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60738012480F87000B571AA /* StartViewController.swift */; };
+		D6371D982493720800470897 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6371D972493720800470897 /* NotificationCenter.framework */; };
+		D6371D9B2493720800470897 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6371D9A2493720800470897 /* TodayViewController.swift */; };
+		D6371DA22493720800470897 /* widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D6371D962493720800470897 /* widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D6371DA72493726400470897 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6371D9C2493720800470897 /* MainInterface.storyboard */; };
 		D63E275C2482305F00CEC3EE /* ChooseColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E27532482305F00CEC3EE /* ChooseColorView.swift */; };
 		D63E275D2482305F00CEC3EE /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E27542482305F00CEC3EE /* TaskViewCell.swift */; };
 		D63E275E2482305F00CEC3EE /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63E27552482305F00CEC3EE /* RegisterView.xib */; };
@@ -26,6 +30,30 @@
 		D63E276D248233D000CEC3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63E276C248233D000CEC3EE /* Main.storyboard */; };
 		D63E276F248278EA00CEC3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63E276E248278EA00CEC3EE /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6371DA02493720800470897 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D60737D42480F5D200B571AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6371D952493720800470897;
+			remoteInfo = widget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D6371DA32493720800470897 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D6371DA22493720800470897 /* widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A233D7198251F35E5810B8F4 /* Pods_Zadatak_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zadatak_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +67,11 @@
 		D60737FE2480F87000B571AA /* 08SeoulNamsanL_0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 08SeoulNamsanL_0.ttf; sourceTree = "<group>"; };
 		D60738002480F87000B571AA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D60738012480F87000B571AA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		D6371D962493720800470897 /* widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6371D972493720800470897 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		D6371D9A2493720800470897 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		D6371D9D2493720800470897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D6371D9F2493720800470897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D63E27532482305F00CEC3EE /* ChooseColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseColorView.swift; sourceTree = "<group>"; };
 		D63E27542482305F00CEC3EE /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		D63E27552482305F00CEC3EE /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
@@ -61,6 +94,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6371D932493720800470897 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6371D982493720800470897 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				D60737DE2480F5D200B571AA /* Zadatak! */,
+				D6371D992493720800470897 /* widget */,
 				D60737DD2480F5D200B571AA /* Products */,
 				11493D3C6CB0BFC81D2877E8 /* Pods */,
 				F92F1F5C6C6FC52F063731AB /* Frameworks */,
@@ -87,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				D60737DC2480F5D200B571AA /* Zadatak!.app */,
+				D6371D962493720800470897 /* widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +183,16 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		D6371D992493720800470897 /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				D6371D9A2493720800470897 /* TodayViewController.swift */,
+				D6371D9C2493720800470897 /* MainInterface.storyboard */,
+				D6371D9F2493720800470897 /* Info.plist */,
+			);
+			path = widget;
+			sourceTree = "<group>";
+		};
 		D63E27512482305F00CEC3EE /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				A233D7198251F35E5810B8F4 /* Pods_Zadatak_.framework */,
+				D6371D972493720800470897 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -193,15 +247,34 @@
 				D60737D92480F5D200B571AA /* Frameworks */,
 				D60737DA2480F5D200B571AA /* Resources */,
 				07CEF123107D2FF6AF16C287 /* [CP] Embed Pods Frameworks */,
+				D6371DA32493720800470897 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D6371DA12493720800470897 /* PBXTargetDependency */,
 			);
 			name = "Zadatak!";
 			productName = "Zadatak!";
 			productReference = D60737DC2480F5D200B571AA /* Zadatak!.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D6371D952493720800470897 /* widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6371DA62493720800470897 /* Build configuration list for PBXNativeTarget "widget" */;
+			buildPhases = (
+				D6371D922493720800470897 /* Sources */,
+				D6371D932493720800470897 /* Frameworks */,
+				D6371D942493720800470897 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = widget;
+			productName = widget;
+			productReference = D6371D962493720800470897 /* widget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -214,6 +287,9 @@
 				ORGANIZATIONNAME = "이현욱";
 				TargetAttributes = {
 					D60737DB2480F5D200B571AA = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					D6371D952493720800470897 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -232,6 +308,7 @@
 			projectRoot = "";
 			targets = (
 				D60737DB2480F5D200B571AA /* Zadatak! */,
+				D6371D952493720800470897 /* widget */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D63E27612482305F00CEC3EE /* ChooseColorView.xib in Resources */,
+				D6371DA72493726400470897 /* MainInterface.storyboard in Resources */,
 				D63E27602482305F00CEC3EE /* TaskViewCell.xib in Resources */,
 				D63E27672482314A00CEC3EE /* GoogleService-Info.plist in Resources */,
 				D60738162480F87000B571AA /* 08SeoulNamsanL_0.ttf in Resources */,
@@ -250,6 +328,13 @@
 				D63E275E2482305F00CEC3EE /* RegisterView.xib in Resources */,
 				D63E276F248278EA00CEC3EE /* Assets.xcassets in Resources */,
 				D60738152480F87000B571AA /* yugothil.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6371D942493720800470897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +398,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6371D922493720800470897 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6371D9B2493720800470897 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6371DA12493720800470897 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6371D952493720800470897 /* widget */;
+			targetProxy = D6371DA02493720800470897 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D6371D9C2493720800470897 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6371D9D2493720800470897 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D60737EE2480F5D400B571AA /* Debug */ = {
@@ -434,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6ADC798876042FF5B0348D3 /* Pods-Zadatak!.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D49753ZB3N;
 				INFOPLIST_FILE = "Zadatak!/Info.plist";
@@ -452,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0E7FE44B989F78328644D7A /* Pods-Zadatak!.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D49753ZB3N;
 				INFOPLIST_FILE = "Zadatak!/Info.plist";
@@ -461,6 +575,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Zadatak-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D6371DA42493720800470897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D49753ZB3N;
+				INFOPLIST_FILE = widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "test.Zadatak-.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6371DA52493720800470897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D49753ZB3N;
+				INFOPLIST_FILE = widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "test.Zadatak-.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -483,6 +635,15 @@
 			buildConfigurations = (
 				D60737F12480F5D400B571AA /* Debug */,
 				D60737F22480F5D400B571AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6371DA62493720800470897 /* Build configuration list for PBXNativeTarget "widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6371DA42493720800470897 /* Debug */,
+				D6371DA52493720800470897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

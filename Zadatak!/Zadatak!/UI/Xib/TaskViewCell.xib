@@ -23,39 +23,40 @@
                             <constraint firstAttribute="width" secondItem="v4c-LX-hQT" secondAttribute="height" multiplier="1:1" id="kx9-Z7-LHJ"/>
                         </constraints>
                     </view>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-VL-PEA">
-                        <rect key="frame" x="46" y="5" width="254" height="34"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                    </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3a-3a-RC2">
                         <rect key="frame" x="46" y="5" width="254" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-VL-PEA">
+                        <rect key="frame" x="46" y="5" width="254" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="254" id="JzM-Me-4mO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="y3a-3a-RC2" secondAttribute="bottom" constant="5" id="2ne-ME-PRR"/>
-                    <constraint firstAttribute="trailing" secondItem="y3a-3a-RC2" secondAttribute="trailing" constant="20" id="5ui-4F-0lX"/>
-                    <constraint firstItem="v4c-LX-hQT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6o4-3W-9G9"/>
-                    <constraint firstItem="y3a-3a-RC2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="G5v-q7-qi2"/>
-                    <constraint firstAttribute="bottom" secondItem="Vhv-VL-PEA" secondAttribute="bottom" constant="5" id="Gst-UA-dL5"/>
-                    <constraint firstAttribute="bottom" secondItem="v4c-LX-hQT" secondAttribute="bottom" constant="17" id="IGt-t1-UtT"/>
-                    <constraint firstItem="Vhv-VL-PEA" firstAttribute="leading" secondItem="v4c-LX-hQT" secondAttribute="trailing" constant="20" id="Koo-Ej-w3k"/>
-                    <constraint firstAttribute="trailing" secondItem="Vhv-VL-PEA" secondAttribute="trailing" constant="20" id="Lvp-a1-DM1"/>
-                    <constraint firstItem="v4c-LX-hQT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="Q2r-kr-he2"/>
-                    <constraint firstItem="Vhv-VL-PEA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="QUG-AH-0i3"/>
-                    <constraint firstItem="y3a-3a-RC2" firstAttribute="leading" secondItem="v4c-LX-hQT" secondAttribute="trailing" constant="20" id="YCV-nc-BDS"/>
+                    <constraint firstItem="v4c-LX-hQT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="2b0-ml-KVy"/>
+                    <constraint firstItem="y3a-3a-RC2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="D5k-S0-DoR"/>
+                    <constraint firstAttribute="bottom" secondItem="y3a-3a-RC2" secondAttribute="bottom" constant="5" id="HN0-fX-ro8"/>
+                    <constraint firstAttribute="trailing" secondItem="y3a-3a-RC2" secondAttribute="trailing" constant="20" id="Izg-Gs-gAI"/>
+                    <constraint firstItem="v4c-LX-hQT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ZgO-yS-VTy"/>
+                    <constraint firstItem="y3a-3a-RC2" firstAttribute="leading" secondItem="v4c-LX-hQT" secondAttribute="trailing" constant="20" id="bLQ-1c-LGt"/>
+                    <constraint firstItem="Vhv-VL-PEA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="f8J-yG-JXq"/>
+                    <constraint firstItem="v4c-LX-hQT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="j3Q-D3-NuH"/>
+                    <constraint firstAttribute="trailing" secondItem="Vhv-VL-PEA" secondAttribute="trailing" constant="20" id="lr8-HH-Prr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="dot" destination="v4c-LX-hQT" id="McP-t0-MCQ"/>
+                <outlet property="dotView" destination="v4c-LX-hQT" id="McP-t0-MCQ"/>
                 <outlet property="taskLabel" destination="y3a-3a-RC2" id="CN2-OL-dwl"/>
                 <outlet property="taskTextField" destination="Vhv-VL-PEA" id="lon-eK-Rjd"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
+            <point key="canvasLocation" x="115.94202898550725" y="85.714285714285708"/>
         </tableViewCell>
     </objects>
 </document>

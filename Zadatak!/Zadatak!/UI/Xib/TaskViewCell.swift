@@ -1,43 +1,43 @@
 import UIKit
 
-class TaskViewCell: UITableViewCell, UITextFieldDelegate {
+// MARK: TaskViewCell
+
+final class TaskViewCell: UITableViewCell {
     
-    var changeToLabel: Bool?
-    
-    @IBOutlet weak var dot: UIView!
+    @IBOutlet weak var dotView: CircleView!
     @IBOutlet weak var taskTextField: UITextField!
     @IBOutlet weak var taskLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        dot.viewToCircle()
+        dotView.viewToCircle()
         taskTextField.delegate = self
         taskLabel.isHidden = true
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
+    // 더 좋은 이름으로 바꾸세요
+    private func setToLbl(to value: Bool) {
+        if !value { return }
+        taskLabel.text = taskTextField.text
+        taskLabel.isHidden = false
+        taskTextField.isHidden = value
+        taskTextField.text = nil
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
+}
+
+// MARK: UITextFieldDelegate
+
+extension TaskViewCell: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        changeToLabel = true
-        
-        changeToLabelFunc()
+        setToLbl(to: true)
         return true
     }
-    
-    func changeToLabelFunc() {
-        if changeToLabel != false {
-            taskLabel.text = taskTextField.text
-            taskLabel.isHidden = false
-            print(1)
-            taskTextField.isHidden = true
-            taskTextField.text = nil
-        }
+}
+
+final class CircleView: UIView {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.cornerRadius = self.frame.width * 0.7
     }
 }

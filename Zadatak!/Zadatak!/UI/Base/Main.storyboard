@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7sf-rV-ddS">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -355,7 +355,7 @@
                         <outlet property="addTaskBtn" destination="DGg-dj-Wzu" id="hcZ-ug-iZV"/>
                         <outlet property="chooseColorView" destination="VJW-KJ-fvg" id="vQs-VF-HbR"/>
                         <outlet property="hiddenBtn" destination="rn0-1i-UtV" id="A13-Oe-omA"/>
-                        <outlet property="listTable" destination="QYf-PN-GJ7" id="tYQ-JX-Viu"/>
+                        <outlet property="listTableView" destination="QYf-PN-GJ7" id="tYQ-JX-Viu"/>
                         <outlet property="nickNameLbl" destination="ZGG-es-gkx" id="Vba-Qn-hD9"/>
                         <outlet property="settingBtn" destination="jp4-Jy-Pkh" id="jiH-Tj-yPa"/>
                         <outlet property="taskProgress" destination="Q2P-bf-lJc" id="Dqw-fb-nbt"/>

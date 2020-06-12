@@ -25,13 +25,17 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setDelegate()
         isHiddenTrueOrFalse(value: true)
+        registerError(data: false)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisa(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func setDelegate() {
         logInEmailTextField.delegate = self
         logInPWTextField.delegate = self
         register.errorDelegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisa(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        registerError(data: false)
     }
     
     @IBAction func autoLogin() {
@@ -43,7 +47,7 @@ class StartViewController: UIViewController {
             keepLogInBtn.setBackgroundImage(UIImage(contentsOfFile: "square"), for: .selected)
         }
         if self.isAutoLogin{
-            if logInEmailTextField.text != "" || logInPWTextField.text != "" {
+            if !logInEmailTextField.text!.isEmpty || !logInPWTextField.text!.isEmpty {
                 ud.set(logInEmailTextField.text, forKey: "id")
                 ud.set(logInPWTextField.text, forKey: "pwd")
             }
@@ -53,18 +57,16 @@ class StartViewController: UIViewController {
     
     
     @IBAction func login(_ sender: UIButton) {
-        if logInEmailTextField.text == "" || logInPWTextField.text == "" {
+        if logInEmailTextField.text!.isEmpty || logInPWTextField.text!.isEmpty {
             presentAlert(Title: "로그인 실패", Message: "아이디 혹은 비밀번호가 비었습니다.")
         } else {
             Auth.auth().signIn(withEmail: logInEmailTextField.text!, password: logInPWTextField.text!) { [weak self] authResult, error in
                 guard self != nil else { return }
-                if let error = error {
-                    print(error.localizedDescription)
+                if error != nil {
                     self!.presentAlert(Title: "로그인 실패", Message: "아이디 혹은 비밀번호가 틀렸거나, 아이디가 없습니다")
                     return
                 } else {
                     guard let vc = self?.storyboard?.instantiateViewController(identifier: "MainVC") as? MainViewController else { return }
-                    vc.receivedBool = true
                     vc.modalPresentationStyle = .fullScreen
                     self?.present(vc, animated: true, completion: nil)
                 }
