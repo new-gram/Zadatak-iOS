@@ -1,16 +1,15 @@
 import UIKit
 import Firebase
 
-// MARK: Deleagates
 
-protocol RegisterViewDelegate { func registerError(data: Bool) }
+protocol RegisterViewDelegate { func registerError(value: Bool) }
 
 // MARK: RegisterView
 
 final class RegisterView: UIView {
 
-    var errorDelegate: RegisterViewDelegate?
-    
+    var delegate: RegisterViewDelegate?
+
     @IBOutlet weak var registerView: RegisterView!
     @IBOutlet weak var registerTitleLbl: UILabel!
     @IBOutlet weak var registerBtn: UIButton!
@@ -39,18 +38,17 @@ final class RegisterView: UIView {
     }
     
     @IBAction func register(_ sender: UIButton) {
-        if (registerEmailTextField.text!.isEmpty)
-            || (registerNameTextField.text!.isEmpty)
-            || (registerPWTextField.text!.isEmpty ) {
+        if (!registerEmailTextField.text!.isEmpty)
+            || (!registerNameTextField.text!.isEmpty)
+            || (!registerPWTextField.text!.isEmpty ) {
             Auth.auth().createUser(withEmail: registerEmailTextField.text!,
                                    password: registerPWTextField.text!) { authResult, error in
                 guard let _ = authResult?.user, error == nil else {
                     print(error!.localizedDescription)
-                    self.errorDelegate?.registerError(data: true) // 더 좋은 방법 생각해보기
+                    self.delegate?.registerError(value: true)
                     return
                 }
                 UserDefaults.standard.set(self.registerNameTextField.text, forKey: "Name")
-                self.errorDelegate?.registerError(data: false)
             }
         }
     }

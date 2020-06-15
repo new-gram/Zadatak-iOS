@@ -20,7 +20,6 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         self.setDelegate()
         isHiddenTrueOrFalse(value: true)
-        registerError(data: false)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisa(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -60,7 +59,7 @@ class StartViewController: UIViewController {
             }
         }
     }
-    
+
     @IBAction func presentXib(_ sender: UIButton) {
         isHiddenTrueOrFalse(value: false)
     }
@@ -72,16 +71,14 @@ class StartViewController: UIViewController {
     private func setDelegate() {
         logInEmailTextField.delegate = self
         logInPWTextField.delegate = self
-        register.errorDelegate = self
+        register.delegate = self
     }
 }
 
 extension StartViewController: UITextFieldDelegate, RegisterViewDelegate {
-    func registerError(data: Bool) {
-        if data {
-            presentAlert(Title: "로그인 실패", Message: "아이디가 있거나 형식이 틀렸습니다.")
-        } else {
-            isHiddenTrueOrFalse(value: true)
+    func registerError(value: Bool) {
+        if value {
+            presentAlert(Title: "회원가입 실패", Message: "아이디가 있거나 형식에 맞지 않습니다.")
         }
     }
     

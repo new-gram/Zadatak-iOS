@@ -18,7 +18,6 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var settingBtn: UIButton!
     
     override func viewDidLoad() {
-        chooseColor()
         super.viewDidLoad()
         self.setDelegate()
         setHidden(to: true)
@@ -39,9 +38,9 @@ final class MainViewController: UIViewController {
     }
 
     private func setDelegate() {
-        chooseColorView.logOutDelegate = self
         listTableView.dataSource = self
         listTableView.delegate = self
+        chooseColorView.delegate = self
     }
     
     @IBAction func addTask(_ sender: UIButton) {
@@ -58,17 +57,24 @@ final class MainViewController: UIViewController {
     @IBAction func disMissNib(_ sender: UIButton) {
         setHidden(to: true)
     }
-    
-    func chooseColor() {
-        let storedColor = chooseColorView?.color
-        taskProgress.tintColor = storedColor
-        settingBtn.tintColor = storedColor
-        addTaskBtn.tintColor = storedColor
-    }
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, DisMissNibDelegate {
-
+extension MainViewController: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, ChooseColorViewDelegate {
+    func setColor(color: UIColor) {
+        taskProgress.tintColor = color
+        settingBtn.tintColor = color
+        addTaskBtn.tintColor = color
+    }
+    
+    func logOut(value: Bool) {
+        setHidden(to: value)
+        ud.removeObject(forKey: "id")
+        ud.removeObject(forKey: "pwd")
+        presentVC(identifier: "RegeisterVC")
+    }
+    
+   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count;
     }
@@ -76,7 +82,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIText
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             data.remove(at: indexPath.row)
-            totalTasks += 1
+            doneTasks += 1
             listTableView.deleteRows(at: [indexPath], with: .automatic)
             reloadTaskProgress()
         }
@@ -87,14 +93,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIText
         return cell
     }
     
-    func logOut(value: Bool) {
-        setHidden(to: value)
-        ud.removeObject(forKey: "id")
-        ud.removeObject(forKey: "pwd")
-        presentVC(identifier: "RegeisterVC")
-    }
-    
-    // fix
     func reloadTaskProgress() {
         if totalTasks == 0 {
             taskProgress.progress = 0.0

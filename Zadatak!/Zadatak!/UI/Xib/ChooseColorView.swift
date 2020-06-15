@@ -1,17 +1,17 @@
 import UIKit
 
-// MARK: Delegates
 
-// 지우자. 다른 방법을 찾아라. 비효율적이다.
-protocol DisMissNibDelegate { func logOut(value: Bool) }
+protocol ChooseColorViewDelegate {
+    func logOut(value: Bool)
+    func setColor(color: UIColor)
+}
 
 // MARK: ChooseColorView
 
 final class ChooseColorView: UIView {
     
-    var logOutDelegate: DisMissNibDelegate?
-    var color: UIColor!
-    
+    var delegate: ChooseColorViewDelegate?
+
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var colorInfoLabel: UILabel!
     @IBOutlet weak var optionLabel: UILabel!
@@ -38,12 +38,13 @@ final class ChooseColorView: UIView {
         self.addSubview(view)
     }
     
-    @IBAction func logOut() {
-        logOutDelegate?.logOut(value: true)
+    @IBAction func getLogOut() {
+        self.delegate?.logOut(value: true)
     }
     
     @IBAction func chooseColor(_ sender: UIButton) {
-        color = sender.currentTitleColor
+        var color = sender.currentTitleColor
+        delegate?.setColor(color: color)
         optionLabel.backgroundColor = color
         logOutBtn.titleLabel?.textColor = color
         colorInfoLabel.text = Color(rawValue: sender.tag)?.name

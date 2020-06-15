@@ -134,7 +134,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your emotion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r82-DF-MdM">
-                    <rect key="frame" x="64.333333333333329" y="67.666666666666671" width="144.66666666666669" height="18"/>
+                    <rect key="frame" x="64.333333333333329" y="67.666666666666671" width="144.66666666666669" height="17.666666666666671"/>
                     <fontDescription key="fontDescription" name="YuGothic-Light" family="Yu Gothic" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -146,7 +146,7 @@
                         <color key="titleColor" red="0.99607843139999996" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
-                        <action selector="logOut" destination="-1" eventType="touchUpInside" id="2kt-kG-NZc"/>
+                        <action selector="getLogOut" destination="-1" eventType="touchUpInside" id="2kt-kG-NZc"/>
                     </connections>
                 </button>
             </subviews>
