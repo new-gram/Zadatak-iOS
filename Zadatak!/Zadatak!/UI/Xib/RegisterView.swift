@@ -26,8 +26,7 @@ final class RegisterView: UIView {
         super.init(coder: coder)
         commonInit()
     }
-    
-    // 이름 변경
+
     func commonInit() {
         Bundle.main.loadNibNamed("RegisterView", owner: self, options: nil)
         self.addSubview(registerView)

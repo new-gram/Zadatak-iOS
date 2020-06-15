@@ -1,14 +1,7 @@
-//
-//  ViewController.swift
-//  Zadatak!
-//
-//  Created by 이현욱 on 2019/11/22.
-//  Copyright © 2019 이현욱. All rights reserved.
-//
-
 import Firebase
 import UIKit
 
+// MARK: StartViewController
 class StartViewController: UIViewController {
     
     var isAutoLogin = false
@@ -32,29 +25,22 @@ class StartViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisa(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    private func setDelegate() {
-        logInEmailTextField.delegate = self
-        logInPWTextField.delegate = self
-        register.errorDelegate = self
-    }
-    
     @IBAction func autoLogin() {
         if keepLogInBtn.isSelected {
             isAutoLogin = true
             keepLogInBtn.setBackgroundImage(UIImage(contentsOfFile: "checkmark.square.fill"), for: .selected)
-        } else {
-            isAutoLogin = false
-            keepLogInBtn.setBackgroundImage(UIImage(contentsOfFile: "square"), for: .selected)
-        }
-        if self.isAutoLogin{
             if !logInEmailTextField.text!.isEmpty || !logInPWTextField.text!.isEmpty {
                 ud.set(logInEmailTextField.text, forKey: "id")
                 ud.set(logInPWTextField.text, forKey: "pwd")
             }
+        } else {
+            isAutoLogin = false
+            keepLogInBtn.setBackgroundImage(UIImage(contentsOfFile: "square"), for: .selected)
+            ud.removeObject(forKey: "id")
+            ud.removeObject(forKey: "pwd")
         }
         keepLogInBtn.isSelected = !keepLogInBtn.isSelected
     }
-    
     
     @IBAction func login(_ sender: UIButton) {
         if logInEmailTextField.text!.isEmpty || logInPWTextField.text!.isEmpty {
@@ -68,18 +54,25 @@ class StartViewController: UIViewController {
                 } else {
                     guard let vc = self?.storyboard?.instantiateViewController(identifier: "MainVC") as? MainViewController else { return }
                     vc.modalPresentationStyle = .fullScreen
+                    vc.isLogin = true
                     self?.present(vc, animated: true, completion: nil)
                 }
             }
         }
     }
     
-    @IBAction func showRegisterXib(_ sender: UIButton) {
+    @IBAction func presentXib(_ sender: UIButton) {
         isHiddenTrueOrFalse(value: false)
-        // 회원가입 창 떴을 때 바탕 터치하면 창 사라지기
     }
-    @IBAction func tabbedBackground(_ sender: UIButton) {
+    
+    @IBAction func disMissXib(_ sender: UIButton) {
         isHiddenTrueOrFalse(value: true)
+    }
+    
+    private func setDelegate() {
+        logInEmailTextField.delegate = self
+        logInPWTextField.delegate = self
+        register.errorDelegate = self
     }
 }
 

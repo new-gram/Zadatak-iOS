@@ -1,9 +1,9 @@
 import UIKit
 
 // MARK: MainViewController
-
 final class MainViewController: UIViewController {
     
+    var isLogin: Bool!
     private let ud = UserDefaults.standard
     private var data = [String]()
     private var totalTasks = 0
@@ -32,9 +32,10 @@ final class MainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        if ud.string(forKey: "id") == nil {
-//            presentVC(identifier: "RegeisterVC")
-//        }
+        if isLogin == true { return }
+            if ud.string(forKey: "id") == nil {
+                presentVC(identifier: "RegeisterVC")
+        }
     }
 
     private func setDelegate() {
@@ -46,8 +47,8 @@ final class MainViewController: UIViewController {
     @IBAction func addTask(_ sender: UIButton) {
         data.append("")
         listTableView.reloadData()
-        totalTasks += 1
         reloadTaskProgress()
+        totalTasks += 1
     }
     
     @IBAction func showColorXib(_ sender: Any) {
